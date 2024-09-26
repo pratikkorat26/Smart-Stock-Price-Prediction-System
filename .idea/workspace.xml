@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd2f1d8b-bff9-4512-8112-6e44aa69e5d0" name="Changes" comment="" />
+    <list default="true" id="fd2f1d8b-bff9-4512-8112-6e44aa69e5d0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataservice/api/form4.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataservice/api/form4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataservice/api/yahoo.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataservice/api/yahoo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataservice/database/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataservice/database/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataservice/services/sec_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataservice/services/sec_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataservice/services/yahoo_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataservice/services/yahoo_service.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +58,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -71,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1727122917344</updated>
       <workItem from="1727122918427" duration="1614000" />
-      <workItem from="1727327437182" duration="340000" />
+      <workItem from="1727327437182" duration="7373000" />
     </task>
     <servers />
   </component>
