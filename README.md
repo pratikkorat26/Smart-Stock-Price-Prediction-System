@@ -11,7 +11,7 @@
  // Link to be added here    
 
 ## User Persona Summary Document
-![View Project Documentation](https://docs.google.com/document/d/1M36ZfJ77DTIMX9P-NQI2_S8Kb-T7aSXh_dai-61QxJ4/edit)
+[View Project Documentation](https://docs.google.com/document/d/1M36ZfJ77DTIMX9P-NQI2_S8Kb-T7aSXh_dai-61QxJ4/edit)
 
 ## Project Scrum Report
  // Link to be added here
