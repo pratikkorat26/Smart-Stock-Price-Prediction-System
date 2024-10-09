@@ -1,5 +1,4 @@
-# Canvas Learning Management System
-
+# Project Name: CleverTradeWatch
 ## About the Team
 
 ### Team Members:
@@ -8,7 +7,7 @@
 3. Nevil Padariya
 4. Nagaraj Gireppa Kanni
 
-## UI Wireframes -> TradeSoft
+## UI Wireframes -> CleverTradeWatch
  // Link to be added here    
 
 ## Project Scrum Report
