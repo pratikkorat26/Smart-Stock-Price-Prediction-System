@@ -20,15 +20,12 @@ This project investigates the relationship between insider trading activity and 
 [View User Persona Summary](https://docs.google.com/document/d/1M36ZfJ77DTIMX9P-NQI2_S8Kb-T7aSXh_dai-61QxJ4/edit)
 
 ## Product Backlog
-[View Product Backlog ](https://docs.google.com/spreadsheets/d/1-6SNRWafSqVvoitA6lYNFqx0OGWtVJPsw2Rxw7qgCcU/edit?usp=sharing)
- 
-## Backend Application
-* Python - FastAPI
+[View Product Backlog ](https://docs.google.com/spreadsheets/d/1-6SNRWafSqVvoitA6lYNFqx0OGWtVJPsw2Rxw7qgCcU/edit?usp=sharing) 
+
 
 ## Project Technologies Stack:
 
 * Backend -> Python, FastAPI
 * Database -> MongoDB
 * Frontend -> Streamlit / Kiwi
-* Wireframes -> Figma
 * Deployment -> AWS/GCP
