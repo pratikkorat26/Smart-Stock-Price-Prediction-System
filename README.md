@@ -12,18 +12,14 @@ This project investigates the relationship between insider trading activity and 
 3. Nevil Padariya
 4. Nagaraj Gireppa Kanni
 
-## UI Wireframes -> CleverTradeWatch
- // Link to be added here    
+## Microservice Architecture Diagram: ![Architecture-Diagram](https://github.com/user-attachments/assets/6d971bbd-a026-4ee1-a531-ff2f8788ec2f)
+
 
 ## User Persona Summary Document
-[View Project Documentation](https://docs.google.com/document/d/1M36ZfJ77DTIMX9P-NQI2_S8Kb-T7aSXh_dai-61QxJ4/edit)
+[View User Persona Summary](https://docs.google.com/document/d/1M36ZfJ77DTIMX9P-NQI2_S8Kb-T7aSXh_dai-61QxJ4/edit)
 
-## Project Scrum Report
- // Link to be added here
-
-## Project Sprint Task Board
- // Link to be added here
-
+## Product Backlog
+[View Product Backlog ](https://docs.google.com/spreadsheets/d/1-6SNRWafSqVvoitA6lYNFqx0OGWtVJPsw2Rxw7qgCcU/edit?usp=sharing)
  
 ## Backend Application
 * Python - FastAPI
