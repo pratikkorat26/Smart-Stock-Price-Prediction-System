@@ -1,10 +1,10 @@
 # app.py
 
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI
 
-from routers.auth_router import auth_router
-from routers.sec_router import sec_router
-from routers.stock_router import stock_router
+from backend.routers.auth_router import auth_router
+from backend.routers.sec_router import sec_router
+from backend.routers.stock_router import stock_router
 
 app = FastAPI()
 
