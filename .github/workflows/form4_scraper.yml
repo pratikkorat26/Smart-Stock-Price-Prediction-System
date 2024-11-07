@@ -26,4 +26,4 @@ jobs:
     - name: Run the Form 4 Scraper script
       env:
         MONGODB_URI: ${{ secrets.MONGODB_URI }}
-      run: python form4_scraper.py  # Update the path if needed
+      run: python form4_scraper_sec.py  # Update the path if needed
