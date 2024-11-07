@@ -63,6 +63,7 @@ def fetch_form_4_links(cik):
                 if link.text.endswith('.txt'):
                     form_4_links.append(f"https://www.sec.gov{link['href']}")
                     break
+        time.time(1)
         except requests.exceptions.RequestException as e:
             logging.error(f"Failed to fetch Form 4 link for accession {accession_number} of CIK {cik}: {e}")
 
