@@ -76,7 +76,7 @@ def extract_details_from_form4(form4_url):
         if response.status_code != 200:
             logging.error(f"Failed to fetch data from {form4_url}. Status code: {response.status_code}")
             return None
-        time.sleep(1)
+        time.sleep(5)
     except requests.exceptions.RequestException as e:
         logging.error(f"Error fetching Form 4 data from {form4_url}: {e}")
         return None
