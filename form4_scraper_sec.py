@@ -63,7 +63,6 @@ def fetch_form_4_links(cik):
                 if link.text.endswith('.txt'):
                     form_4_links.append(f"https://www.sec.gov{link['href']}")
                     break
-        time.time(1)
         except requests.exceptions.RequestException as e:
             logging.error(f"Failed to fetch Form 4 link for accession {accession_number} of CIK {cik}: {e}")
 
@@ -77,7 +76,7 @@ def extract_details_from_form4(form4_url):
         if response.status_code != 200:
             logging.error(f"Failed to fetch data from {form4_url}. Status code: {response.status_code}")
             return None
-        time.sleep(0.01)
+        time.sleep(1)
     except requests.exceptions.RequestException as e:
         logging.error(f"Error fetching Form 4 data from {form4_url}: {e}")
         return None
