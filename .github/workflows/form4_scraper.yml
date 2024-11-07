@@ -1,5 +1,6 @@
 name: Form 4 Scraper
 
+
 on:
   schedule:
     - cron: '0 0 * * *'  # Runs every 24 hours at midnight UTC
@@ -8,6 +9,7 @@ on:
 jobs:
   run-script:
     runs-on: ubuntu-latest
+    environment: Dev
 
     steps:
     - name: Checkout repository
@@ -16,7 +18,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.8'
+        python-version: '3.12'
 
     - name: Install dependencies
       run: |
