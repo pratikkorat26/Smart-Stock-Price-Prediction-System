@@ -25,8 +25,6 @@ logging.basicConfig(
 
 # List of tickers and CIKs
 ticker_cik_mapping = {
-    "AAPL": "0000320193",
-    "NVDA": "0001045810",
     "META": "0001326801"
 }
 
