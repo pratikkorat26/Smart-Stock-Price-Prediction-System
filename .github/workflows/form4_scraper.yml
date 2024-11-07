@@ -3,6 +3,7 @@ name: Form 4 Scraper
 on:
   schedule:
     - cron: '0 0 * * *'  # Runs every 24 hours at midnight UTC
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   run-script:
@@ -25,4 +26,4 @@ jobs:
     - name: Run the Form 4 Scraper script
       env:
         MONGODB_URI: ${{ secrets.MONGODB_URI }}
-      run: python form4_scraper_sec.py
+      run: python scripts/form4_scraper.py  # Update the path if needed
