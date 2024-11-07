@@ -8,6 +8,7 @@ from pymongo import MongoClient
 from lxml import etree
 from io import StringIO
 import re
+import time
 
 # MongoDB setup using environment variable for secure connection
 client = MongoClient(os.getenv("MONGODB_URI"))
@@ -25,6 +26,8 @@ logging.basicConfig(
 
 # List of tickers and CIKs
 ticker_cik_mapping = {
+    "AAPL": "0000320193",
+    "NVDA": "0001045810",
     "META": "0001326801"
 }
 
@@ -73,6 +76,7 @@ def extract_details_from_form4(form4_url):
         if response.status_code != 200:
             logging.error(f"Failed to fetch data from {form4_url}. Status code: {response.status_code}")
             return None
+        time.sleep(0.01)
     except requests.exceptions.RequestException as e:
         logging.error(f"Error fetching Form 4 data from {form4_url}: {e}")
         return None
