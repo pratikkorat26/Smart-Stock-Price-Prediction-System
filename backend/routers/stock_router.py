@@ -1,9 +1,9 @@
 from fastapi import APIRouter, HTTPException, Depends, Query, status
 from fastapi.security import OAuth2PasswordBearer
 from typing import List
-from models.stock_data import StockDataModel
-from services.stock_service import fetch_stock_data
-from services.auth_services import decode_access_token
+from backend.models.stock_data import StockDataModel
+from backend.services.stock_service import fetch_stock_data
+from backend.services.auth_services import decode_access_token
 
 # Define the OAuth2 token dependency
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token")

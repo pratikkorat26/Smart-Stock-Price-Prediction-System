@@ -1,0 +1,6 @@
+2024-11-11 11:19:57,452 [WARNING] (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/nevilsmac/Downloads/CMPE 272/cmpe272env/cmpe272/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'

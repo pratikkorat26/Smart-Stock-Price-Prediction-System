@@ -6,8 +6,8 @@ from typing import Union, List, Optional
 
 from bson import ObjectId
 from pymongo.errors import PyMongoError
-from database.database import sec_db as db
-from models.sec_form4 import TransactionModel
+from backend.database.database import sec_db as db
+from backend.models.sec_form4 import TransactionModel
 
 # Set up logging configuration
 logging.basicConfig(

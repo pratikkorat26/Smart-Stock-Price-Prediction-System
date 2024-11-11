@@ -3,9 +3,9 @@
 from fastapi import APIRouter, HTTPException, Depends, status
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 
-from database.database import user_db as db
-from models.users import User
-from services.auth_services import hash_password, verify_password, create_access_token, decode_access_token
+from backend.database.database import user_db as db
+from backend.models.users import User
+from backend.services.auth_services import hash_password, verify_password, create_access_token, decode_access_token
 
 auth_router = APIRouter()
 

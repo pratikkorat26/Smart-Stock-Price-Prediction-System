@@ -3,9 +3,9 @@
 from fastapi import APIRouter, HTTPException, Depends, status, Query
 from fastapi.security import OAuth2PasswordBearer
 from typing import List, Optional
-from models.sec_form4 import TransactionModel
-from services.sec_service import get_transaction_by_id, get_all_transactions
-from services.auth_services import decode_access_token
+from backend.models.sec_form4 import TransactionModel
+from backend.services.sec_service import get_transaction_by_id, get_all_transactions
+from backend.services.auth_services import decode_access_token
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token")
 sec_router = APIRouter()
