@@ -1,0 +1,94 @@
+// src/components/Sidebar.tsx
+import React from 'react';
+import { Box, Typography, Button, Divider } from '@mui/material';
+import { Dashboard, AccountCircle, Login } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
+import logo from '../assests/Images/Logo.png'; // Replace with the actual path to your logo
+
+const Sidebar: React.FC = () => {
+  return (
+    <Box
+      sx={{
+        width: '250px',
+        height: '100vh',
+        backgroundColor: '#f7f7ff', // Light background color
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        padding: '1rem',
+        boxShadow: '2px 0px 5px rgba(0,0,0,0.1)',
+        position: 'fixed', // Fix the sidebar position
+        top: 0, // Stick to the top of the viewport
+        left: 0, // Align to the left side of the viewport
+        zIndex: 1000, // Ensure it appears above other content
+      }}
+    >
+      {/* Logo and Title */}
+      <Box display="flex" alignItems="center" mb={4}>
+        <Link to="/dashboard" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+          <img src={logo} alt="SnoopTrade Logo" style={{ width: '40px', height: '40px', marginRight: '8px' }} />
+          <Typography variant="h6" color="primary">SnoopTrade</Typography>
+        </Link>
+      </Box>
+
+      <Divider style={{ width: '100%', marginBottom: '1rem' }} />
+
+      {/* Navigation Buttons */}
+      <Button
+        component={Link}
+        to="/dashboard"
+        startIcon={<Dashboard />}
+        fullWidth
+        variant="text"
+        sx={{
+          justifyContent: 'flex-start',
+          color: '#3c3c4e',
+          mb: 1,
+          '&:hover': {
+            backgroundColor: '#e8eaf6', // Light purple on hover
+          },
+        }}
+      >
+        Dashboard
+      </Button>
+
+      <Button
+        component={Link}
+        to="/account"
+        startIcon={<AccountCircle />}
+        fullWidth
+        variant="text"
+        sx={{
+          justifyContent: 'flex-start',
+          color: '#3c3c4e',
+          mb: 1,
+          '&:hover': {
+            backgroundColor: '#e8eaf6',
+          },
+        }}
+      >
+        Manage Account
+      </Button>
+
+      <Button
+        component={Link}
+        to="/"
+        startIcon={<Login />}
+        fullWidth
+        variant="text"
+        sx={{
+          justifyContent: 'flex-start',
+          color: '#3c3c4e',
+          mb: 1,
+          '&:hover': {
+            backgroundColor: '#e8eaf6',
+          },
+        }}
+      >
+        Login
+      </Button>
+    </Box>
+  );
+};
+
+export default Sidebar;
