@@ -11,16 +11,16 @@ const Sidebar: React.FC = () => {
       sx={{
         width: '250px',
         height: '100vh',
-        backgroundColor: '#f7f7ff', // Light background color
+        backgroundColor: '#f7f7ff',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         padding: '1rem',
         boxShadow: '2px 0px 5px rgba(0,0,0,0.1)',
-        position: 'fixed', // Fix the sidebar position
-        top: 0, // Stick to the top of the viewport
-        left: 0, // Align to the left side of the viewport
-        zIndex: 1000, // Ensure it appears above other content
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        zIndex: 1000,
       }}
     >
       {/* Logo and Title */}

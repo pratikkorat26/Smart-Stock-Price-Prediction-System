@@ -1,8 +1,9 @@
-// src/pages/SignUp.tsx
 import React, { useState } from 'react';
 import { TextField, Button, Box, Typography, IconButton, InputAdornment, Paper } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
+import GoogleIcon from '@mui/icons-material/Google';
 import { Helmet } from 'react-helmet';
+import BackgroundImage from '../assests/Images/login_background.jpg';
 
 const SignUp: React.FC = () => {
   const [name, setName] = useState('');
@@ -19,7 +20,7 @@ const SignUp: React.FC = () => {
     confirmPassword: '',
   });
 
-  const validateName = (name: string) => name.length > 0 ? '' : 'Name is required';
+  const validateName = (name: string) => (name.length > 0 ? '' : 'Name is required');
   const validateEmail = (email: string) =>
     /^\S+@\S+\.\S+$/.test(email) ? '' : 'Enter a valid email';
   const validatePassword = (password: string) =>
@@ -46,96 +47,143 @@ const SignUp: React.FC = () => {
     }
   };
 
+  const handleGoogleSignUp = () => {
+    console.log('Google Sign Up initiated');
+    // Add Google sign-up logic here
+  };
+
   return (
     <Box
       display="flex"
-      flexDirection="column"
       alignItems="center"
       justifyContent="center"
       minHeight="100vh"
-      bgcolor="#f0f4f8"
+      sx={{
+        backgroundImage: `url(${BackgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
     >
       <Helmet>
         <title>Sign Up | SnoopTrade</title>
       </Helmet>
-      <Paper elevation={3} style={{ padding: '2rem', maxWidth: '400px', width: '100%' }}>
-        <Typography variant="h4" gutterBottom align="center">Sign Up</Typography>
-        <TextField
-          label="Name"
-          variant="outlined"
-          margin="normal"
-          fullWidth
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          error={Boolean(errors.name)}
-          helperText={errors.name}
-        />
-        <TextField
-          label="Email"
-          type="email"
-          variant="outlined"
-          margin="normal"
-          fullWidth
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          error={Boolean(errors.email)}
-          helperText={errors.email}
-        />
-        <TextField
-          label="Password"
-          type={showPassword ? 'text' : 'password'}
-          variant="outlined"
-          margin="normal"
-          fullWidth
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          error={Boolean(errors.password)}
-          helperText={errors.password}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton
-                  onClick={() => setShowPassword(!showPassword)}
-                  edge="end"
-                >
-                  {showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
-        />
-        <TextField
-          label="Re-type Password"
-          type={showConfirmPassword ? 'text' : 'password'}
-          variant="outlined"
-          margin="normal"
-          fullWidth
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          error={Boolean(errors.confirmPassword)}
-          helperText={errors.confirmPassword}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton
-                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                  edge="end"
-                >
-                  {showConfirmPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
-        />
-        <Button
-          type="submit"
-          variant="contained"
-          color="primary"
-          fullWidth
-          style={{ marginTop: '1rem' }}
-          onClick={handleSubmit}
-        >
+
+      {/* Content Wrapper */}
+      <Paper
+        elevation={3}
+        sx={{
+          padding: '2rem',
+          maxWidth: '400px',
+          width: '90%',
+          backgroundColor: 'rgba(255, 255, 255, 0.85)',
+          borderRadius: '10px',
+          boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)',
+        }}
+      >
+        <Typography variant="h4" gutterBottom align="center">
           Sign Up
+        </Typography>
+        <form onSubmit={handleSubmit}>
+          <TextField
+            label="Name"
+            variant="outlined"
+            margin="normal"
+            fullWidth
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            error={Boolean(errors.name)}
+            helperText={errors.name}
+          />
+          <TextField
+            label="Email"
+            type="email"
+            variant="outlined"
+            margin="normal"
+            fullWidth
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            error={Boolean(errors.email)}
+            helperText={errors.email}
+          />
+          <TextField
+            label="Password"
+            type={showPassword ? 'text' : 'password'}
+            variant="outlined"
+            margin="normal"
+            fullWidth
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            error={Boolean(errors.password)}
+            helperText={errors.password}
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton
+                    onClick={() => setShowPassword(!showPassword)}
+                    edge="end"
+                  >
+                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
+          />
+          <TextField
+            label="Re-type Password"
+            type={showConfirmPassword ? 'text' : 'password'}
+            variant="outlined"
+            margin="normal"
+            fullWidth
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            error={Boolean(errors.confirmPassword)}
+            helperText={errors.confirmPassword}
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton
+                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                    edge="end"
+                  >
+                    {showConfirmPassword ? <VisibilityOff /> : <Visibility />}
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
+          />
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            fullWidth
+            sx={{ marginTop: '1rem' }}
+          >
+            Sign Up
+          </Button>
+        </form>
+
+        {/* OR Divider */}
+        <Typography
+          variant="body2"
+          align="center"
+          sx={{ marginTop: '1rem', marginBottom: '1rem' }}
+        >
+          OR
+        </Typography>
+
+        {/* Google Sign Up Button */}
+        <Button
+          variant="contained"
+          fullWidth
+          startIcon={<GoogleIcon />}
+          onClick={handleGoogleSignUp}
+          sx={{
+            backgroundColor: '#DB4437',
+            color: 'white',
+            '&:hover': { backgroundColor: '#C33D2E' },
+          }}
+        >
+          Sign Up with Google
         </Button>
       </Paper>
     </Box>
