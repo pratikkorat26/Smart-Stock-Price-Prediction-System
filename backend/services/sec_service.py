@@ -84,6 +84,7 @@ def get_all_transactions(ticker: str, time_period: Optional[str] = None) -> Unio
 
         # Fetch transactions with the date filter applied
         cursor = collection.find(date_filter)
+
         transactions = [TransactionModel(**doc) for doc in cursor]
 
         if transactions:

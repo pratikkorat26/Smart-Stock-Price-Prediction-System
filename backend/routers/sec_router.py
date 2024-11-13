@@ -43,6 +43,7 @@ async def read_all_transactions(
     - **time_period**: Optional time period filter. Accepts "1w" (1 week), "1m" (1 month), "3m" (3 months), "6m" (6 months).
     """
     transactions = get_all_transactions(ticker, time_period)
+
     if transactions is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
                             detail=f"No transactions found for ticker '{ticker}' in period '{time_period}'")

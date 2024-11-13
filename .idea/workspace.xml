@@ -5,12 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd2f1d8b-bff9-4512-8112-6e44aa69e5d0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/CMPE272GenAIProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/TradeChart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataservice/api/form4.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataservice/api/form4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataservice/api/yahoo.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataservice/api/yahoo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataservice/database/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataservice/database/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataservice/services/sec_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataservice/services/sec_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataservice/services/yahoo_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataservice/services/yahoo_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routers/auth_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routers/auth_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routers/sec_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routers/sec_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/sec_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/sec_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Account.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/SignUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/SignUp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction_service.log" beforeDir="false" afterPath="$PROJECT_DIR$/transaction_service.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +35,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jupyter Notebook" />
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -39,6 +55,9 @@
     &quot;accountId&quot;: &quot;a631715e-3cdf-454f-87c4-639a29ba339a&quot;
   }
 }</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -51,21 +70,23 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "F:/SJSUSTUDY/SemesterStudies/272/project",
+    "last_opened_file_path": "F:/SJSUSTUDY/SemesterStudies/272/CMPE272GenAIProject",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "settings.editor.selected.configurable": "inlay.hints",
+    "ts.external.directory.path": "F:\\SJSUSTUDY\\SemesterStudies\\272\\CMPE272GenAIProject\\frontend\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
+        <option value="bundled-python-sdk-c69650fc56ca-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.15619.17" />
       </set>
     </attachedChunks>
   </component>
@@ -79,6 +100,9 @@
       <updated>1727122917344</updated>
       <workItem from="1727122918427" duration="1614000" />
       <workItem from="1727327437182" duration="7373000" />
+      <workItem from="1731474769891" duration="1634000" />
+      <workItem from="1731476674654" duration="8791000" />
+      <workItem from="1731517008601" duration="3998000" />
     </task>
     <servers />
   </component>
