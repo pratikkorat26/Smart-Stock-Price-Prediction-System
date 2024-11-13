@@ -68,17 +68,49 @@ const Login: React.FC = () => {
     }
   };
 
-  const handleGoogleSuccess = (response: any) => {
-    try {
-      const token = response.credential;
-      localStorage.setItem('authToken', token); // Store token in localStorage
-      const user = jwtDecode(token);
-      console.log('Google Login successful:', user);
-      navigate('/dashboard');
-    } catch (error) {
-      console.error('Error decoding Google token:', error);
+const handleGoogleSuccess = async (response: any) => {
+  try {
+    const token = response.credential;
+
+    // Decode the Google token to get the user email
+    const decodedToken: { email?: string } = jwtDecode(token);
+    const userEmail = decodedToken.email;
+
+    if (userEmail) {
+      // Prepare form data with email as username, an empty password, and login_type as "google"
+      const formData = new URLSearchParams();
+      formData.append('username', userEmail); // Send email as username
+      formData.append('password', ''); // Empty string as password for Google login
+      formData.append('login_type', 'google'); // Additional field to identify Google login
+
+      // Send request to the /auth/token endpoint
+      const tokenResponse = await fetch('http://127.0.0.1:8000/auth/token', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: formData.toString(),
+      });
+
+      if (tokenResponse.ok) {
+        const data = await tokenResponse.json();
+        localStorage.setItem('authToken', data.access_token); // Store the new token
+        console.log('Token generated successfully for Google login:', data);
+        navigate('/dashboard');
+      } else {
+        const errorData = await tokenResponse.json();
+        setLoginError(errorData.detail || 'You are not signed up for this application.');
+      }
+    } else {
+      setLoginError('Google login failed: No email found.');
     }
-  };
+  } catch (error) {
+    console.error('Error during Google login:', error);
+    setLoginError('Something went wrong with Google login. Please try again.');
+  }
+};
+
+
 
   const handleGoogleFailure = () => {
     console.error('Google Login failed');

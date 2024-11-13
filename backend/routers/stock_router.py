@@ -9,6 +9,7 @@ from backend.services.auth_services import decode_access_token
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token")
 stock_router = APIRouter()
 
+
 # Dependency for token verification
 def get_current_user(token: str = Depends(oauth2_scheme)):
     """
@@ -23,10 +24,11 @@ def get_current_user(token: str = Depends(oauth2_scheme)):
         )
     return user
 
+
 @stock_router.get("/stocks/{ticker}", response_model=List[StockDataModel])
 def get_stock_data(
         ticker: str,
-        period: str = Query("1y", regex="^(1w|1m|3m|6m|1y)$"),
+        period: str = Query("6m", regex="^(1w|1m|3m|6m)$"),
         limit: int = Query(None, description="Limit the number of returned results"),
         user: dict = Depends(get_current_user)
 ):

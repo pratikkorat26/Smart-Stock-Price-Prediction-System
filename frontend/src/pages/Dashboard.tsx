@@ -1,30 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Box,
-  Typography,
-  Paper,
-  TextField,
-  IconButton,
-  InputAdornment,
-  Button,
-  ButtonGroup,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  TablePagination,
-} from '@mui/material';
-import { Search } from '@mui/icons-material';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Brush, Scatter } from 'recharts';
+import { Box, Typography, Switch, FormControlLabel } from '@mui/material';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../contex/AuthContext';
+import SearchBar from '../components/SearchBar';
+import CompanyList from '../components/CompanyList';
+import ChartContainer from '../components/ChartContainer';
+import DataTable from '../components/DataTable';
+import { fetchData } from '../utils/fetchData';
+import InsiderTradingCharts from "../components/InsiderTradingChats";
 
 const TIME_PERIODS = {
   ONE_MONTH: "1m",
@@ -40,109 +23,19 @@ const Dashboard: React.FC = () => {
   const [filteredCompanies, setFilteredCompanies] = useState<string[]>(COMPANIES);
   const [selectedCompany, setSelectedCompany] = useState<string | null>(null);
   const [selectedTimePeriod, setSelectedTimePeriod] = useState(TIME_PERIODS.SIX_MONTHS);
-  const [stockData, setStockData] = useState([]);
-  const [tradeData, setTradeData] = useState([]);
+  const [stockData, setStockData] = useState<any[]>([]);
+  const [tradeData, setTradeData] = useState<any[]>([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const { token, clearToken } = useAuth();
+  const [isLogScaleShares, setIsLogScaleShares] = useState(false); // Log scale for shares chart
+  const [isLogScalePrice, setIsLogScalePrice] = useState(false); // Log scale for price chart
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (!token) {
-      navigate('/login');
-    }
-  }, [token, navigate]);
+  const token = localStorage.getItem('authToken');
 
-  useEffect(() => {
-    if (!selectedCompany) return;
-
-    const fetchStockData = async () => {
-      setLoading(true);
-      setError('');
-      try {
-        const response = await fetch(`http://localhost:8000/stocks/${selectedCompany}?period=${selectedTimePeriod}`, {
-          method: 'GET',
-          headers: {
-            'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json',
-          },
-        });
-
-        if (!response.ok) {
-          if (response.status === 401) {
-            clearToken();
-            navigate('/login');
-          } else {
-            throw new Error(`Error ${response.status}: ${response.statusText}`);
-          }
-        }
-
-        const data = await response.json();
-        const formattedData = data
-          .map((item: any) => ({
-            date: new Date(item.date).toLocaleDateString(),
-            open: item.open,
-            close: item.close,
-            high: item.high,
-            low: item.low,
-          }))
-          .sort((a: any, b: any) => new Date(a.date).getTime() - new Date(b.date).getTime());
-        setStockData(formattedData);
-      } catch (error: any) {
-        setError(error.message || 'Failed to fetch stock data');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    const fetchTradeData = async () => {
-      setLoading(true);
-      setError('');
-      try {
-        const response = await fetch(`http://localhost:8000/transactions/${selectedCompany}?time_period=${selectedTimePeriod}`, {
-          method: 'GET',
-          headers: {
-            'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json',
-          },
-        });
-
-        if (!response.ok) {
-          throw new Error(`Error ${response.status}: ${response.statusText}`);
-        }
-
-        const data = await response.json();
-        const formattedTrades = data.map((trade: any) => ({
-          date: new Date(trade.transaction_date).toLocaleDateString(),
-          shares: Number(trade.shares),
-          ...trade,
-        }));
-        setTradeData(formattedTrades);
-      } catch (error: any) {
-        setError(error.message || 'Failed to fetch insider trade data');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchStockData();
-    fetchTradeData();
-  }, [selectedCompany, selectedTimePeriod, token, clearToken, navigate]);
-
-  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value.toUpperCase();
-    setSearchTerm(value);
-    setFilteredCompanies(COMPANIES.filter(company => company.startsWith(value)));
-  };
-
-  const handleCompanySelect = (company: string) => {
-    setSearchTerm(company);
-    setSelectedCompany(company);
-    setSelectedTimePeriod(TIME_PERIODS.SIX_MONTHS);
-  };
-
+  // Pagination handlers for DataTable
   const handleChangePage = (event: unknown, newPage: number) => {
     setPage(newPage);
   };
@@ -152,138 +45,177 @@ const Dashboard: React.FC = () => {
     setPage(0);
   };
 
-  const visibleRows = tradeData.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
-
   const customTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
       const data = payload[0].payload;
       const trade = tradeData.find((t: any) => t.date === data.date);
       return (
-        <Paper elevation={3} style={{ padding: '10px', backgroundColor: '#fff', borderRadius: '8px' }}>
+        <Box p={2} sx={{ backgroundColor: '#fff', borderRadius: 1, boxShadow: 1 }}>
           <Typography color="textPrimary">Date: {data.date}</Typography>
           <Typography color="green">Open: {data.open}</Typography>
           <Typography color="red">Close: {data.close}</Typography>
           <Typography color="orange">High: {data.high}</Typography>
           <Typography color="blue">Low: {data.low}</Typography>
-        </Paper>
+          {trade && (
+            <>
+              <Typography fontWeight="bold" mt={1}>Trade Information:</Typography>
+              <Typography>Shares: {trade.shares}</Typography>
+              <Typography>Price Per Share: {trade.price_per_share}</Typography>
+              <Typography>Transaction Code: {trade.transaction_code}</Typography>
+              <Typography>Ownership Type: {trade.ownership_type}</Typography>
+            </>
+          )}
+        </Box>
       );
     }
     return null;
   };
 
-  const alignedTradeData = tradeData.filter((trade: any) =>
-    stockData.some((stock: any) => stock.date === trade.date)
-  );
+  const fetchStockData = async () => {
+    if (!selectedCompany || !token) return;
+    setLoading(true);
+    setError('');
+    try {
+      const url = `http://localhost:8000/stocks/${selectedCompany}?period=${selectedTimePeriod}`;
+      const data = await fetchData(url, token);
+
+      const formattedData = data
+        .map((item: any) => ({
+          date: new Date(item.date).toLocaleDateString(),
+          open: item.open,
+          close: item.close,
+          high: item.high,
+          low: item.low,
+        }))
+        .sort((a: any, b: any) => new Date(a.date).getTime() - new Date(b.date).getTime());
+      setStockData(formattedData);
+    } catch (error: any) {
+      if (error.message.includes("401")) {
+        localStorage.removeItem('authToken');
+        navigate('/login');
+      } else {
+        setError(error.message || 'Failed to fetch stock data');
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const fetchTradeData = async () => {
+    if (!selectedCompany || !token) return;
+    setLoading(true);
+    setError('');
+    try {
+      const url = `http://localhost:8000/transactions/${selectedCompany}?time_period=${selectedTimePeriod}`;
+      const data = await fetchData(url, token);
+
+      const formattedTrades = data.map((trade: any) => ({
+        date: new Date(trade.transaction_date).toLocaleDateString(),
+        shares: Number(trade.shares),
+        high: trade.high,
+        low: trade.low,
+        open: trade.open,
+        close: trade.close,
+        security_title: trade.security_title,
+        transaction_code: trade.transaction_code,
+        price_per_share: trade.price_per_share,
+        ownership_type: trade.ownership_type,
+      }));
+      setTradeData(formattedTrades);
+    } catch (error: any) {
+      setError(error.message || 'Failed to fetch insider trade data');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    if (token) {
+      fetchStockData();
+      fetchTradeData();
+    } else {
+      navigate('/login');
+    }
+  }, [selectedCompany, selectedTimePeriod, token]);
 
   return (
-    <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" minHeight="100vh" bgcolor="#F3F6F8">
-      <Helmet>
-        <title>Dashboard | SnoopTrade</title>
-      </Helmet>
-      <Box display="flex" flexDirection="column" alignItems="center" p={2} width="100%" maxWidth="1200px">
-        <TextField
-          variant="outlined"
-          placeholder="Search for a company"
-          value={searchTerm}
-          onChange={handleSearchChange}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <IconButton>
-                  <Search />
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
-          fullWidth
-        />
+    <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" minHeight="100vh" bgcolor="#EAEFF3">
+      <Helmet><title>Dashboard | SnoopTrade</title></Helmet>
+
+      {/* Search and Company Selection */}
+      <Box display="flex" flexDirection="column" alignItems="center" p={2} width="100%" maxWidth="1200px" mt={4}>
+        <SearchBar searchTerm={searchTerm} onSearchChange={(e) => setSearchTerm(e.target.value.toUpperCase())} />
         {searchTerm && filteredCompanies.length > 0 && (
-          <List style={{ width: '100%', maxWidth: '400px', backgroundColor: '#fff', marginTop: '1rem', borderRadius: '8px', boxShadow: '0 2px 5px rgba(0,0,0,0.1)' }}>
-            {filteredCompanies.map((company) => (
-              <ListItem key={company} disablePadding>
-                <ListItemButton onClick={() => handleCompanySelect(company)}>
-                  <ListItemText primary={company} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
+          <CompanyList companies={filteredCompanies} onSelectCompany={(company) => setSelectedCompany(company)} />
         )}
       </Box>
-      <Paper elevation={3} style={{ padding: '1rem', width: '100%', maxWidth: '1200px', marginTop: '2rem' }}>
-        <Typography variant="h5" align="center" gutterBottom>
-          {selectedCompany ? `Stock Price Trend for ${selectedCompany}` : 'Select a company to see the data'}
-        </Typography>
-        {selectedCompany ? (
-          loading ? (
-            <Typography align="center">Loading...</Typography>
-          ) : error ? (
-            <Typography color="error" align="center">{error}</Typography>
-          ) : stockData.length > 0 ? (
-            <ResponsiveContainer width="100%" height={400}>
-              <LineChart data={stockData}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="date" />
-                <YAxis domain={['auto', 'auto']} />
-                <Tooltip content={customTooltip} />
-                <Line
-                  type="monotone"
-                  dataKey="close"
-                  stroke="#73C2A0"
-                  activeDot={{ r: 8 }}
-                />
-                <Scatter data={alignedTradeData} dataKey="date" fill="red" />
-                <Brush dataKey="date" height={30} stroke="#73C2A0" />
-              </LineChart>
-            </ResponsiveContainer>
-          ) : (
-            <Typography align="center">No data available for the selected company.</Typography>
-          )
-        ) : (
-          <Typography align="center" color="textSecondary">
-            Please select a company to see the data.
-          </Typography>
-        )}
-      </Paper>
-      <Paper elevation={3} style={{ padding: '1rem', width: '100%', maxWidth: '1200px', marginTop: '2rem' }}>
-        <Typography variant="h5" align="center" gutterBottom>
-          Insider Trade Information
-        </Typography>
-        <TableContainer>
-          <Table>
-            <TableHead>
-              <TableRow>
-                <TableCell>Date</TableCell>
-                <TableCell>Security Title</TableCell>
-                <TableCell>Transaction Code</TableCell>
-                <TableCell>Shares</TableCell>
-                <TableCell>Price Per Share</TableCell>
-                <TableCell>Ownership Type</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {visibleRows.map((trade: any, index: number) => (
-                <TableRow key={index}>
-                  <TableCell>{trade.date}</TableCell>
-                  <TableCell>{trade.security_title}</TableCell>
-                  <TableCell>{trade.transaction_code}</TableCell>
-                  <TableCell>{trade.shares}</TableCell>
-                  <TableCell>{trade.price_per_share}</TableCell>
-                  <TableCell>{trade.ownership_type}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-          <TablePagination
-            rowsPerPageOptions={[5, 10, 20]}
-            component="div"
-            count={tradeData.length}
-            rowsPerPage={rowsPerPage}
-            page={page}
-            onPageChange={handleChangePage}
-            onRowsPerPageChange={handleChangeRowsPerPage}
+
+      {/* Stock Price Trend Chart */}
+      {stockData.length > 0 && (
+        <>
+          <FormControlLabel
+            control={<Switch checked={isLogScalePrice} onChange={(e) => setIsLogScalePrice(e.target.checked)} color="primary" />}
+            label="Logarithmic Scale for Stock Prices"
           />
-        </TableContainer>
-      </Paper>
+          <ChartContainer
+            title="Stock Price Trend"
+            data={stockData}
+            dataKey="close"
+            lineColor="#73C2A0"
+            tooltipContent={customTooltip}
+            scatterData={tradeData.filter((trade) => stockData.some((stock) => stock.date === trade.date))}
+            isLogScale={isLogScalePrice} // Pass individual log scale state for this chart
+          />
+        </>
+      )}
+
+      {/* Volume of Shares Traded Over Time Chart */}
+      {tradeData.length > 0 && (
+        <>
+          <FormControlLabel
+            control={<Switch checked={isLogScaleShares} onChange={(e) => setIsLogScaleShares(e.target.checked)} color="primary" />}
+            label="Logarithmic Scale for Volume of Shares"
+          />
+          <ChartContainer
+            title="Volume of Shares Traded Over Time"
+            data={tradeData}
+            dataKey="shares"
+            lineColor="#FFA500"
+            tooltipContent={customTooltip}
+            isLogScale={isLogScaleShares} // Pass individual log scale state for this chart
+          />
+        </>
+      )}
+
+      {/* High and Low Prices Over Time Chart */}
+      {stockData.length > 0 && (
+        <ChartContainer
+          title="High and Low Prices Over Time"
+          data={stockData}
+          dataKey="high"
+          lineColor="#FF4500"
+          tooltipContent={customTooltip}
+        />
+      )}
+
+      {/* Insider Trading Insights */}
+      {tradeData.length > 0 && (
+        <Box mt={4} width="100%" maxWidth="1200px">
+          <Typography variant="h5" align="center" gutterBottom>Insider Trading Insights</Typography>
+          <InsiderTradingCharts tradeData={tradeData} />
+        </Box>
+      )}
+
+      {/* Data Table */}
+      {tradeData.length > 0 && (
+        <DataTable
+          tradeData={tradeData}
+          rowsPerPage={rowsPerPage}
+          page={page}
+          handleChangePage={handleChangePage}
+          handleChangeRowsPerPage={handleChangeRowsPerPage}
+        />
+      )}
     </Box>
   );
 };

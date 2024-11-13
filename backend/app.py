@@ -7,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from backend.routers.auth_router import auth_router
 from backend.routers.sec_router import sec_router
 from backend.routers.stock_router import stock_router
-
+from backend.routers.forecast_router import forecast_router
 app = FastAPI()
 
 app.add_middleware(
@@ -21,7 +21,7 @@ app.add_middleware(
 app.include_router(auth_router, prefix="/auth", tags=["Authentication"])
 app.include_router(sec_router, tags=["SecEdgar"])
 app.include_router(stock_router, tags=["Stocks"])
-
+app.include_router(forecast_router, tags=["Forecasts"])
 
 @app.get("/")
 async def welcome():
