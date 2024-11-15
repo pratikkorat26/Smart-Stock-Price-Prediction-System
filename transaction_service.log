@@ -162,3 +162,15 @@ Traceback (most recent call last):
 AttributeError: module 'bcrypt' has no attribute '__about__'
 2024-11-13 10:10:40,661 [INFO] Retrieved 54 transactions for ticker 'AAPL' in period '6m'
 2024-11-13 10:11:27,494 [INFO] Retrieved 511 transactions for ticker 'NVDA' in period '6m'
+2024-11-13 17:56:51,572 [WARNING] (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/nevilsmac/Downloads/CMPE 272/cmpe272env/cmpe272/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-11-13 18:00:43,757 [INFO] Retrieved 54 transactions for ticker 'AAPL' in period '6m'
+2024-11-13 18:13:49,721 [INFO] Retrieved 54 transactions for ticker 'AAPL' in period '6m'
+2024-11-13 18:13:51,988 [INFO] Retrieved 511 transactions for ticker 'NVDA' in period '6m'
+2024-11-13 18:13:52,536 [INFO] Retrieved 953 transactions for ticker 'META' in period '6m'
+2024-11-13 18:13:52,998 [INFO] Retrieved 54 transactions for ticker 'AAPL' in period '6m'
+2024-11-13 18:19:53,614 [INFO] Retrieved 953 transactions for ticker 'META' in period '6m'

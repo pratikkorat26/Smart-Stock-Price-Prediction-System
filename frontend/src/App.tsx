@@ -29,13 +29,12 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Box display="flex">
+      <Box  >
         {/* Conditionally render Sidebar */}
         {!noSidebarRoutes.includes(location.pathname) && <Sidebar />}
         <Box
           component="main"
           flexGrow={1}
-          p={3}
           ml={!noSidebarRoutes.includes(location.pathname) ? '250px' : '0'} // Adjust margin for pages without the sidebar
         >
           <Routes>
