@@ -27,3 +27,4 @@ This project investigates the relationship between insider trading activity and 
 * Database -> MongoDB
 * Frontend -> Streamlit / Kiwi
 * Deployment -> AWS/GCP
+# SnoopTrade
