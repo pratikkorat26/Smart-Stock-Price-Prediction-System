@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { TextField, Button, Box, Typography, IconButton, InputAdornment, Paper, Snackbar, Alert } from '@mui/material';
+import { TextField, Button, Box, Typography, IconButton, InputAdornment, Paper } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import GoogleIcon from '@mui/icons-material/Google';
 import { Helmet } from 'react-helmet';
-import { useNavigate } from 'react-router-dom';
 import BackgroundImage from '../assests/Images/login_background.jpg';
 
 const SignUp: React.FC = () => {
@@ -13,8 +12,6 @@ const SignUp: React.FC = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [successMessage, setSuccessMessage] = useState(false); // Success message state
-  const navigate = useNavigate();
 
   const [errors, setErrors] = useState({
     name: '',
@@ -31,7 +28,7 @@ const SignUp: React.FC = () => {
   const validateConfirmPassword = (password: string, confirmPassword: string) =>
     password === confirmPassword ? '' : 'Passwords do not match';
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const nameError = validateName(name);
     const emailError = validateEmail(email);
@@ -39,34 +36,7 @@ const SignUp: React.FC = () => {
     const confirmPasswordError = validateConfirmPassword(password, confirmPassword);
 
     if (!nameError && !emailError && !passwordError && !confirmPasswordError) {
-      try {
-        const response = await fetch('http://127.0.0.1:8000/auth/signup', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            name,
-            email,
-            password,
-          }),
-        });
-
-        if (!response.ok) {
-          if (response.status === 409) {
-            setErrors((prev) => ({ ...prev, email: 'Email already exists' }));
-          } else {
-            const errorData = await response.json();
-            setErrors((prev) => ({ ...prev, email: errorData.detail }));
-          }
-        } else {
-          console.log('User registered successfully');
-          setSuccessMessage(true); // Show success message
-          setTimeout(() => {
-            navigate('/'); // Redirect to login page after 2 seconds
-          }, 2000);
-        }
-      } catch (error) {
-        console.error('Error signing up:', error);
-      }
+      console.log('Form submitted successfully');
     } else {
       setErrors({
         name: nameError,
@@ -98,6 +68,7 @@ const SignUp: React.FC = () => {
         <title>Sign Up | SnoopTrade</title>
       </Helmet>
 
+      {/* Content Wrapper */}
       <Paper
         elevation={3}
         sx={{
@@ -191,6 +162,7 @@ const SignUp: React.FC = () => {
           </Button>
         </form>
 
+        {/* OR Divider */}
         <Typography
           variant="body2"
           align="center"
@@ -199,6 +171,7 @@ const SignUp: React.FC = () => {
           OR
         </Typography>
 
+        {/* Google Sign Up Button */}
         <Button
           variant="contained"
           fullWidth
@@ -213,17 +186,6 @@ const SignUp: React.FC = () => {
           Sign Up with Google
         </Button>
       </Paper>
-
-      {/* Success Snackbar */}
-      <Snackbar
-        open={successMessage}
-        autoHideDuration={2000} // Automatically close after 2 seconds
-        onClose={() => setSuccessMessage(false)}
-      >
-        <Alert onClose={() => setSuccessMessage(false)} severity="success" sx={{ width: '100%' }}>
-          User has been registered successfully!
-        </Alert>
-      </Snackbar>
     </Box>
   );
 };

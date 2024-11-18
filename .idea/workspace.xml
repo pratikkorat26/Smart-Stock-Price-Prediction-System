@@ -4,20 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd2f1d8b-bff9-4512-8112-6e44aa69e5d0" name="Changes" comment="Updated the backend">
-      <change afterPath="$PROJECT_DIR$/backend/models/forecast.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routers/forecast_router.py" afterDir="false" />
+    <list default="true" id="fd2f1d8b-bff9-4512-8112-6e44aa69e5d0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/CMPE272GenAIProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/TradeChart.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CMPE272GenAIProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CMPE272GenAIProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerrun.aws.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routers/stock_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routers/stock_router.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/transaction_service.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routers/auth_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routers/auth_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routers/sec_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routers/sec_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/sec_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/sec_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Account.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/SignUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/SignUp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction_service.log" beforeDir="false" afterPath="$PROJECT_DIR$/transaction_service.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +37,6 @@
         <option value="Jupyter Notebook" />
         <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
-        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -52,9 +58,6 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -65,111 +68,25 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python tests.Python tests for test_auth_router.test_get_current_user.executor": "Run",
-    "Python tests.Python tests for test_auth_router.test_login_normal.executor": "Debug",
-    "Python tests.Python tests for test_auth_router.test_login_normal_success.executor": "Run",
-    "Python tests.Python tests for test_auth_router.test_signup_existing_user.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "F:/SJSUSTUDY/SemesterStudies/272/CMPE272GenAIProject",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "settings.editor.selected.configurable": "inlay.hints",
     "ts.external.directory.path": "F:\\SJSUSTUDY\\SemesterStudies\\272\\CMPE272GenAIProject\\frontend\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="QodanaReportsService">
-    <option name="descriptions">
-      <ReportDescription localRun="true" path="C:\Users\prati\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="689ec97c-0e39-444c-a8a1-d35d5991515f" reportId="CMPE272GenAIProject/qodana/2024-11-18" />
-    </option>
-  </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_auth_router.test_signup_existing_user">
-    <configuration name="Python tests for test_auth_router.test_get_current_user" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="CMPE272GenAIProject" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_auth_router.test_get_current_user&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_auth_router.test_login_normal" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="CMPE272GenAIProject" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_auth_router.test_login_normal&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_auth_router.test_login_normal_success" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="CMPE272GenAIProject" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_auth_router.test_login_normal_success&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_auth_router.test_signup_existing_user" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="CMPE272GenAIProject" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_auth_router.test_signup_existing_user&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python tests.Python tests for test_auth_router.test_signup_existing_user" />
-        <item itemvalue="Python tests.Python tests for test_auth_router.test_login_normal_success" />
-        <item itemvalue="Python tests.Python tests for test_auth_router.test_login_normal" />
-        <item itemvalue="Python tests.Python tests for test_auth_router.test_get_current_user" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PY-243.21565.199" />
-        <option value="bundled-python-sdk-cab1f2013843-4ae2d6a61b08-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.21565.199" />
+        <option value="bundled-python-sdk-c69650fc56ca-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.15619.17" />
       </set>
     </attachedChunks>
   </component>
@@ -185,16 +102,7 @@
       <workItem from="1727327437182" duration="7373000" />
       <workItem from="1731474769891" duration="1634000" />
       <workItem from="1731476674654" duration="8791000" />
-      <workItem from="1731517008601" duration="5002000" />
-      <workItem from="1731551086463" duration="7000" />
-      <workItem from="1731551813095" duration="832000" />
-      <workItem from="1731554417095" duration="991000" />
-      <workItem from="1731823608724" duration="4884000" />
-      <workItem from="1731829549207" duration="600000" />
-      <workItem from="1731950212089" duration="2312000" />
-      <workItem from="1731953174777" duration="992000" />
-      <workItem from="1731954190550" duration="1833000" />
-      <workItem from="1731957665382" duration="1963000" />
+      <workItem from="1731517008601" duration="3998000" />
     </task>
     <servers />
   </component>
@@ -211,13 +119,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated backend and fronend for supporting google sign in, normal sign in, normal sign up with Oauth2" />
-    <MESSAGE value="Updated the backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated the backend" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CMPE272GenAIProject$.coverage" NAME=" Coverage Results" MODIFIED="1731827836887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
 </project>

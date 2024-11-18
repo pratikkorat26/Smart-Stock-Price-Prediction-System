@@ -1,11 +1,19 @@
-// src/components/Sidebar.tsx
 import React from 'react';
 import { Box, Typography, Button, Divider } from '@mui/material';
-import { Dashboard, AccountCircle, Login } from '@mui/icons-material';
-import { Link } from 'react-router-dom';
+import { Dashboard, AccountCircle, Logout } from '@mui/icons-material';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assests/Images/Logo.png'; // Replace with the actual path to your logo
 
 const Sidebar: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // Remove the authentication token
+    localStorage.removeItem('authToken');
+    // Redirect to login
+    navigate('/');
+  };
+
   return (
     <Box
       sx={{
@@ -70,10 +78,10 @@ const Sidebar: React.FC = () => {
         Manage Account
       </Button>
 
+      {/* Logout Button */}
       <Button
-        component={Link}
-        to="/"
-        startIcon={<Login />}
+        onClick={handleLogout}
+        startIcon={<Logout />}
         fullWidth
         variant="text"
         sx={{
@@ -85,7 +93,7 @@ const Sidebar: React.FC = () => {
           },
         }}
       >
-        Login
+        Logout
       </Button>
     </Box>
   );
