@@ -1,4 +1,4 @@
-# Project Name: CleverTradeWatch
+# Project Name: SnoopTrade
 
 ### Project Description
 This project investigates the relationship between insider trading activity and stock price movements. By analyzing insider trading data (e.g., Form 4 filings from the SEC EDGAR database) alongside historical stock price data, the project aims to identify patterns and correlations that can help retail investors better understand how insider trades may influence stock performance. The ultimate goal is to develop a prototype system that visualizes these trends and offers insights into potential stock price impacts based on insider trading activity.
