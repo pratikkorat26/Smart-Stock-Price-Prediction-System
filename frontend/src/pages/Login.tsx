@@ -1,12 +1,13 @@
+// Updated Login.tsx to ensure successful login or Google sign-in redirects to the dashboard page
 import React, { useState } from 'react';
-import { Box, Paper, Typography } from '@mui/material';
+import { Box, Paper, Typography, Fade } from '@mui/material';
 import { Helmet } from 'react-helmet';
 import { useNavigate, Link } from 'react-router-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import {jwtDecode} from 'jwt-decode';
 import BackgroundImage from '../assests/Images/login_background.jpg';
-import LoginHeader from '../components/login/Header';
-import WelcomePanel from '../components/login//WelcomePanel';
+import LoginHeader from '../components/Header';
+import WelcomePanel from '../components/login/WelcomePanel';
 import LoginForm from '../components/login/LoginForm';
 import GoogleLoginButton from '../components/login/GoogleLoginButton';
 
@@ -81,69 +82,135 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div
-      style={{
+    <Box
+      sx={{
+        minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        backgroundImage: `url(${BackgroundImage})`,
+        background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(${BackgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
       }}
     >
+      <Helmet>
+        <title>Login - SnoopTrade</title>
+      </Helmet>
+      
       <LoginHeader />
+      
       <GoogleOAuthProvider clientId={CLIENT_ID}>
-        <Box
-          display="flex"
-          flexDirection={{ xs: 'column', md: 'row' }}
-          width={{ xs: '90%', sm: '80%', lg: '80%' }}
-          maxWidth="1200px"
-          borderRadius="15px"
-          overflow="hidden"
-          sx={{
-            backgroundColor: 'rgba(255, 255, 255, 0.95)',
-            boxShadow: '0 8px 20px rgba(0, 0, 0, 0.2)',
-          }}
-        >
-          <WelcomePanel />
+        <Fade in timeout={1000}>
           <Box
-            flex={1}
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            p={4}
+            sx={{
+              display: 'flex',
+              flexDirection: { xs: 'column', md: 'row' },
+              width: { xs: '90%', sm: '80%', lg: '80%' },
+              maxWidth: '1200px',
+              borderRadius: '16px',
+              overflow: 'hidden',
+              marginTop: '120px',
+              backgroundColor: 'rgba(255, 255, 255, 0.98)',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
+              transition: 'transform 0.3s ease-in-out',
+              '&:hover': {
+                transform: 'translateY(-5px)',
+              },
+            }}
           >
-            <Paper
-              elevation={3}
+            <WelcomePanel />
+            
+            <Box
+              flex={1}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              p={4}
               sx={{
-                padding: '2rem',
-                width: '100%',
-                backgroundColor: '#9D9DA142',
-                borderRadius: '10px',
+                background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(249, 250, 251, 0.9) 100%)',
               }}
             >
-              <Typography variant="h6" align="center" gutterBottom>
-                Login to Your Account
-              </Typography>
-              <LoginForm onSubmit={handleFormSubmit} error={loginError} />
-              <Typography variant="body2" align="center" sx={{ marginY: 2 }}>
-                OR
-              </Typography>
-              <GoogleLoginButton
-                onSuccess={handleGoogleSuccess}
-                onError={handleGoogleFailure}
-              />
-              <Typography variant="body2" align="center" sx={{ marginTop: 2 }}>
-                Don't have an account?{' '}
-                <Link to="/signup" style={{ color: '#73C2A0', textDecoration: 'none' }}>
-                  Sign Up
-                </Link>
-              </Typography>
-            </Paper>
+              <Paper
+                elevation={0}
+                sx={{
+                  padding: '2.5rem',
+                  width: '100%',
+                  maxWidth: '400px',
+                  backgroundColor: 'transparent',
+                  borderRadius: '12px',
+                }}
+              >
+                <Typography 
+                  variant="h5" 
+                  align="center" 
+                  gutterBottom
+                  sx={{
+                    fontWeight: 600,
+                    color: '#2D3748',
+                    marginBottom: 3,
+                  }}
+                >
+                  Login to Your Account
+                </Typography>
+                
+                <LoginForm onSubmit={handleFormSubmit} error={loginError} />
+                
+                <Box
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    margin: '24px 0',
+                    '&::before, &::after': {
+                      content: '""',
+                      flex: 1,
+                      borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+                    },
+                  }}
+                >
+                  <Typography 
+                    variant="body2" 
+                    sx={{ 
+                      margin: '0 16px',
+                      color: '#6B7280',
+                    }}
+                  >
+                    OR
+                  </Typography>
+                </Box>
+                
+                <GoogleLoginButton
+                  onSuccess={handleGoogleSuccess}
+                  onError={handleGoogleFailure}
+                />
+                
+                <Typography 
+                  variant="body2" 
+                  align="center" 
+                  sx={{ 
+                    marginTop: 3,
+                    color: '#4A5568',
+                  }}
+                >
+                  Don't have an account?{' '}
+                  <Link 
+                    to="/signup" 
+                    style={{ 
+                      color: '#73C2A0', 
+                      textDecoration: 'none',
+                      fontWeight: 600,
+                      transition: 'color 0.2s ease',
+                    }}
+                  >
+                    Sign Up
+                  </Link>
+                </Typography>
+              </Paper>
+            </Box>
           </Box>
-        </Box>
+        </Fade>
       </GoogleOAuthProvider>
-    </div>
+    </Box>
   );
 };
 
