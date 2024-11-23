@@ -38,7 +38,6 @@ const App: React.FC = () => {
           <Route path="/landing" element={<Landing />} />
           <Route path="/features" element={<FeaturesPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/dashboard" element={<Dashboard />} />
           <Route
             path="/dashboard"
             element={

@@ -20,7 +20,7 @@ const Navbar = () => {
 
   const handleLogout = () => {
     localStorage.removeItem('authToken');
-    navigate('/');
+    navigate('/login');
   };
 
   const showAccountButton = ['/dashboard', '/about', '/features'].includes(location.pathname);
