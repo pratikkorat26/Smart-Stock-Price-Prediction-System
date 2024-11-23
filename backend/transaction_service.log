@@ -282,3 +282,20 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2024-11-23 00:15:17,589 [INFO] Retrieved 81 transactions for ticker 'NVDA' in period '3m'
 2024-11-23 00:15:35,687 [WARNING] No transactions found for ticker 'NVDA' in period '1m'
 2024-11-23 00:16:40,660 [INFO] Retrieved 81 transactions for ticker 'NVDA' in period '3m'
+2024-11-23 00:56:49,183 [WARNING] (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "F:\SJSUSTUDY\SemesterStudies\272\pyenvs\cmpe272\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-11-23 00:57:04,054 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-23 01:09:03,137 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-23 01:16:21,484 [WARNING] (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "F:\SJSUSTUDY\SemesterStudies\272\pyenvs\cmpe272\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-11-23 01:19:18,506 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-23 01:19:59,551 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-23 01:20:03,121 [INFO] Retrieved 3822 transactions for ticker 'META' in period '1y'
