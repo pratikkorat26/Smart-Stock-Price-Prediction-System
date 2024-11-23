@@ -45,37 +45,51 @@ const Login: React.FC = () => {
   };
 
   const handleGoogleSuccess = async (response: any) => {
-    try {
-      const token = response.credential;
-      const decodedToken: { email?: string } = jwtDecode(token);
-
-      if (decodedToken.email) {
-        const formData = new URLSearchParams();
-        formData.append('username', decodedToken.email);
-        formData.append('password', '');
-        formData.append('login_type', 'google');
-
-        const tokenResponse = await fetch('http://localhost:8000/auth/token', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-          },
-          body: formData.toString(),
-        });
-
-        if (tokenResponse.ok) {
-          const data = await tokenResponse.json();
-          localStorage.setItem('authToken', data.access_token);
-          navigate('/dashboard');
-        } else {
-          const errorData = await tokenResponse.json();
-          setLoginError(errorData.detail || 'Google login failed.');
-        }
-      }
-    } catch (error) {
-      setLoginError('Something went wrong with Google login.');
+  try {
+    const token = response.credential;
+    if (!token) {
+      setLoginError('Google token is missing or invalid.');
+      return;
     }
-  };
+
+    // Decode the Google token to extract the email
+    const decodedToken: { email?: string } = jwtDecode(token);
+
+    if (!decodedToken.email) {
+      setLoginError('Google token does not contain email information.');
+      return;
+    }
+
+    // Prepare form data for login request
+    const formData = new URLSearchParams();
+    formData.append('username', decodedToken.email);
+    formData.append('password', ''); // Password not needed for Google login
+    formData.append('login_type', 'google');
+    formData.append('token', token);
+
+    // Send login request to the backend
+    const tokenResponse = await fetch('http://localhost:8000/auth/token', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: formData.toString(),
+    });
+
+    if (tokenResponse.ok) {
+      const data = await tokenResponse.json();
+      localStorage.setItem('authToken', data.access_token);
+      navigate('/dashboard'); // Redirect to the dashboard on success
+    } else {
+      const errorData = await tokenResponse.json();
+      setLoginError(errorData.detail || 'Google login failed.');
+    }
+  } catch (error) {
+    console.error('Error in Google login:', error);
+    setLoginError('Something went wrong with Google login.');
+  }
+};
+
 
   const handleGoogleFailure = () => {
     setLoginError('Google Login failed.');

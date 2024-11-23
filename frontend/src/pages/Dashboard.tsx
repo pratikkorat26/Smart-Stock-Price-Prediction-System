@@ -149,7 +149,6 @@ const fetchTradeData = async () => {
       });
 
     setTradeData(formattedTrades);
-    console.log('Formatted and sorted trade data:', formattedTrades);
   } catch (error) {
     console.error('Error fetching insider trade data:', error);
   }
