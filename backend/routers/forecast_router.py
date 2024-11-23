@@ -6,8 +6,8 @@ import pandas as pd
 from prophet import Prophet
 from starlette import status
 
-from backend.models.forecast import ForecastIO
-from backend.services.auth_services import decode_access_token
+from models.forecast import ForecastIO
+from services.auth_services import decode_access_token
 
 # FastAPI Router Setup
 forecast_router = APIRouter()

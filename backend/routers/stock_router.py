@@ -1,9 +1,9 @@
 from fastapi import APIRouter, HTTPException, Depends, Query, status
 from fastapi.security import OAuth2PasswordBearer
 from typing import List
-from backend.models.stock_data import StockDataModel
-from backend.services.stock_service import fetch_stock_data
-from backend.services.auth_services import decode_access_token
+from models.stock_data import StockDataModel
+from services.stock_service import fetch_stock_data
+from services.auth_services import decode_access_token
 
 # Define the OAuth2 token dependency
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token")
@@ -28,7 +28,7 @@ def get_current_user(token: str = Depends(oauth2_scheme)):
 @stock_router.get("/stocks/{ticker}", response_model=List[StockDataModel])
 def get_stock_data(
         ticker: str,
-        period: str = Query("6m", regex="^(1w|1m|3m|6m)$"),
+        period: str = Query("1y", regex="^(1w|1m|3m|6m|1y)$"),
         limit: int = Query(None, description="Limit the number of returned results"),
         user: dict = Depends(get_current_user)
 ):

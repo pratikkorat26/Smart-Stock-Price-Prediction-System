@@ -4,15 +4,15 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 
-from backend.routers.auth_router import auth_router
-from backend.routers.sec_router import sec_router
-from backend.routers.stock_router import stock_router
-from backend.routers.forecast_router import forecast_router
+from routers.auth_router import auth_router
+from routers.sec_router import sec_router
+from routers.stock_router import stock_router
+from routers.forecast_router import forecast_router
 app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Update this to match your frontend origin
+    allow_origins=["http://localhost:3000", "*"],  # Update this to match your frontend origin
     allow_credentials=True,
     allow_methods=["*"],  # Allow all methods (e.g., GET, POST, OPTIONS)
     allow_headers=["*"],  # Allow all headers

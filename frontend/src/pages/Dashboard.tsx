@@ -56,7 +56,7 @@ const Dashboard: React.FC<DashboardProps> = () => {
   const [filteredCompanies, setFilteredCompanies] = useState<string[]>(COMPANIES);
   const [showCompanyList, setShowCompanyList] = useState(false);
   const [selectedCompany, setSelectedCompany] = useState<string | null>(null);
-  const [selectedTimePeriod, setSelectedTimePeriod] = useState(TIME_PERIODS.SIX_MONTHS);
+  const [selectedTimePeriod, setSelectedTimePeriod] = useState(TIME_PERIODS.ALL);
   const [stockData, setStockData] = useState<any[]>([]);
   const [tradeData, setTradeData] = useState<any[]>([]);
   const [page, setPage] = useState(0);
@@ -87,44 +87,75 @@ const Dashboard: React.FC<DashboardProps> = () => {
   };
 
   const fetchStockData = async () => {
-    if (!selectedCompany || !token) return;
-    try {
-      const url = API_ENDPOINTS.getStocks(selectedCompany, selectedTimePeriod);
-      const data = await fetchData(url, token);
+  if (!selectedCompany || !token) return;
+  try {
+    const url = API_ENDPOINTS.getStocks(selectedCompany, selectedTimePeriod);
+    const data = await fetchData(url, token);
 
-      const formattedData = data.map((item: any) => ({
-        date: new Date(item.date).toLocaleDateString(),
-        open: item.open,
-        close: item.close,
-        high: item.high,
-        low: item.low,
-      }));
-      setStockData(formattedData);
-    } catch (error: any) {
-      if (error.message.includes('401')) {
-        localStorage.removeItem('authToken');
-        navigate('/login');
-      }
+    // Filter, validate, and format data
+    const formattedData = data
+      .filter((item: any) => item.date) // Filter out entries without a date
+      .map((item: any) => ({
+        date: new Date(item.date).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+        }),
+        open: item.open ?? 0,
+        close: item.close ?? 0,
+        high: item.high ?? 0,
+        low: item.low ?? 0,
+      }))
+      .sort((a: any, b: any) => new Date(a.date).getTime() - new Date(b.date).getTime()); // Sort by date
+
+    setStockData(formattedData);
+  } catch (error: any) {
+    console.error('Error fetching stock data:', error);
+    if (error.message.includes('401')) {
+      localStorage.removeItem('authToken');
+      navigate('/login');
     }
-  };
+  }
+};
 
-  const fetchTradeData = async () => {
-    if (!selectedCompany || !token) return;
-    try {
-      const url = API_ENDPOINTS.getTransactions(selectedCompany, selectedTimePeriod);
-      const data = await fetchData(url, token);
 
-      const formattedTrades = data.map((trade: any) => ({
-        date: new Date(trade.transaction_date).toLocaleDateString(),
-        shares: Number(trade.shares),
+const fetchTradeData = async () => {
+  if (!selectedCompany || !token) return;
+  try {
+    const url = API_ENDPOINTS.getTransactions(selectedCompany, selectedTimePeriod);
+    const data = await fetchData(url, token);
+
+    // Filter data to keep only entries with valid transaction_date
+    const filteredTrades = data.filter((trade: any) => {
+      const transactionDate = new Date(trade.transaction_date);
+      return !isNaN(transactionDate.getTime()); // Keep if transaction_date is a valid date
+    });
+
+    // Format and sort the filtered data by transaction_date (latest to oldest)
+    const formattedTrades = filteredTrades
+      .map((trade: any) => ({
+        filing_date: trade.filing_date, // Keep other relevant fields if needed
+        date: trade.transaction_date, // Preserve the original transaction date
+        formatted_date: new Date(trade.transaction_date).toLocaleDateString('en-US'), // Formatted date for display
+        shares: Number(trade.shares) || 0,
         transaction_code: trade.transaction_code,
         price_per_share: trade.price_per_share,
-      }));
-      setTradeData(formattedTrades);
-    } catch (error) {
-      console.error('Error fetching insider trade data:', error);
-    }
-  };
+        ownership_type: trade.ownership_type,
+        issuer_name: trade.issuer_name,
+        security_title: trade.security_title,
+      }))
+      .sort((a: { date: string }, b: { date: string }) => {
+        return new Date(b.date).getTime() - new Date(a.date).getTime(); // Sort latest to oldest
+      });
+
+    setTradeData(formattedTrades);
+    console.log('Formatted and sorted trade data:', formattedTrades);
+  } catch (error) {
+    console.error('Error fetching insider trade data:', error);
+  }
+};
+
+
 
   useEffect(() => {
     if (token && selectedCompany) {
@@ -204,7 +235,7 @@ const Dashboard: React.FC<DashboardProps> = () => {
               No companies found.
             </Typography>
           )}
-          
+
           {/* Time period selector moved here and only shown when a company is selected */}
           {selectedCompany && (
             <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
@@ -251,8 +282,8 @@ const Dashboard: React.FC<DashboardProps> = () => {
               Data for {selectedCompany}
             </Typography>
 
-            <Box sx={{ 
-              mb: 6, 
+            <Box sx={{
+              mb: 6,
               background: COLORS.background.card,
               p: 4,
               borderRadius: '16px',
@@ -264,13 +295,13 @@ const Dashboard: React.FC<DashboardProps> = () => {
               <ChartContainer
                 title="Stock Price Trends"
                 data={stockData}
-                dataKey="close"
+                dataKey="open"
                 lineColor={COLORS.chart.price}
                 isLogScale={isLogScalePrice}
               />
             </Box>
 
-            <Box sx={{ 
+            <Box sx={{
               mb: 6,
               background: COLORS.background.card,
               p: 4,
@@ -289,7 +320,7 @@ const Dashboard: React.FC<DashboardProps> = () => {
               />
             </Box>
 
-            <Box sx={{ 
+            <Box sx={{
               mb: 6,
               background: COLORS.background.card,
               p: 4,
@@ -303,15 +334,15 @@ const Dashboard: React.FC<DashboardProps> = () => {
             </Box>
 
             <Box mt={6}>
-              <Typography 
-                variant="h5" 
-                align="center" 
+              <Typography
+                variant="h5"
+                align="center"
                 gutterBottom
                 sx={{ color: COLORS.text.primary }}
               >
                 Transaction Details
               </Typography>
-              <Box sx={{ 
+              <Box sx={{
                 background: COLORS.background.card,
                 p: 4,
                 borderRadius: '16px',

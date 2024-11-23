@@ -1,0 +1,284 @@
+2024-11-22 10:39:43,114 [WARNING] (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "F:\SJSUSTUDY\SemesterStudies\272\pyenvs\cmpe272\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-11-22 10:43:04,729 [WARNING] (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "F:\SJSUSTUDY\SemesterStudies\272\pyenvs\cmpe272\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-11-22 10:55:38,710 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 10:55:38,764 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 10:55:49,355 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 10:56:05,371 [INFO] Retrieved 1 transactions for ticker 'AAPL' in period '1m'
+2024-11-22 10:56:16,059 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 10:59:50,539 [INFO] Retrieved 934 transactions for ticker 'META' in period '6m'
+2024-11-22 11:00:40,922 [INFO] Retrieved 934 transactions for ticker 'META' in period '6m'
+2024-11-22 11:00:42,278 [INFO] Retrieved 41 transactions for ticker 'META' in period '3m'
+2024-11-22 11:03:15,315 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 11:07:03,527 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 11:14:21,771 [INFO] Retrieved 934 transactions for ticker 'META' in period '6m'
+2024-11-22 12:11:06,875 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 20:15:34,353 [WARNING] (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "F:\SJSUSTUDY\SemesterStudies\272\pyenvs\cmpe272\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-11-22 20:15:39,545 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 20:20:00,663 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 20:20:10,820 [INFO] Retrieved 934 transactions for ticker 'META' in period '6m'
+2024-11-22 20:21:35,292 [INFO] Retrieved 934 transactions for ticker 'META' in period '6m'
+2024-11-22 20:21:58,069 [INFO] Retrieved 934 transactions for ticker 'META' in period '6m'
+2024-11-22 20:33:48,663 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 20:34:18,813 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 20:39:54,763 [INFO] Retrieved 1 transactions for ticker 'AAPL' in period '1m'
+2024-11-22 20:40:01,566 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 20:41:23,466 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 20:41:57,857 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 20:42:25,624 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 20:42:31,945 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 20:43:11,806 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 20:43:38,026 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 20:44:01,904 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 20:45:30,882 [INFO] Retrieved 1 transactions for ticker 'AAPL' in period '1m'
+2024-11-22 20:47:05,637 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 20:50:42,146 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 20:50:56,470 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 20:51:36,949 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 21:20:24,545 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 21:43:52,793 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 21:46:49,972 [INFO] Retrieved 934 transactions for ticker 'META' in period '6m'
+2024-11-22 21:48:47,764 [INFO] Retrieved 934 transactions for ticker 'META' in period '6m'
+2024-11-22 21:49:26,401 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 21:50:12,667 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 21:50:13,312 [INFO] Retrieved 1 transactions for ticker 'AAPL' in period '1m'
+2024-11-22 21:50:20,732 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 21:50:21,932 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 21:50:22,831 [INFO] Retrieved 1 transactions for ticker 'AAPL' in period '1m'
+2024-11-22 21:52:15,973 [INFO] Retrieved 1 transactions for ticker 'AAPL' in period '1m'
+2024-11-22 21:52:30,741 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 21:52:32,940 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 21:52:35,341 [WARNING] Invalid time period '1y' specified.
+2024-11-22 21:54:36,039 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 21:54:44,671 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-22 21:56:03,825 [INFO] Retrieved 3839 transactions for ticker 'META' in period '1y'
+2024-11-22 21:56:28,546 [INFO] Retrieved 41 transactions for ticker 'META' in period '3m'
+2024-11-22 21:56:29,284 [INFO] Retrieved 934 transactions for ticker 'META' in period '6m'
+2024-11-22 21:56:29,709 [INFO] Retrieved 10 transactions for ticker 'META' in period '1m'
+2024-11-22 21:56:30,533 [INFO] Retrieved 3839 transactions for ticker 'META' in period '1y'
+2024-11-22 21:56:33,204 [INFO] Retrieved 10 transactions for ticker 'META' in period '1m'
+2024-11-22 21:57:55,092 [INFO] Retrieved 41 transactions for ticker 'META' in period '3m'
+2024-11-22 22:01:28,126 [INFO] Retrieved 41 transactions for ticker 'META' in period '3m'
+2024-11-22 22:01:37,601 [INFO] Retrieved 10 transactions for ticker 'META' in period '1m'
+2024-11-22 22:02:50,769 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-22 22:04:22,241 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-22 22:04:30,958 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-22 22:04:58,968 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-22 22:05:25,970 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-22 22:08:15,158 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-22 22:09:51,572 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03475e
+2024-11-22 22:09:51,572 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034764
+2024-11-22 22:09:51,572 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034767
+2024-11-22 22:09:51,572 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03476c
+2024-11-22 22:09:51,572 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034772
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034779
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03477b
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03477c
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03477d
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034780
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034781
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034782
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034786
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034788
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03478d
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03478f
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034790
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034794
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034796
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034798
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03479a
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347a0
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347a3
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347a4
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347ad
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347b0
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347b6
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347b8
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347bc
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347bd
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347c1
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347c8
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347cb
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347ce
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347d0
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03475c
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03475d
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03475f
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034763
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034768
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034769
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03476a
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03476d
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03476f
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034771
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034775
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034784
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034789
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03478b
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03478e
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034792
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03479c
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03479e
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03479f
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347a7
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347a9
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347aa
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347ae
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347b1
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347b3
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347b5
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347ba
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347bb
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347be
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347c0
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347c4
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347c5
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347c6
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347cf
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347d2
+2024-11-22 22:09:51,581 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034760
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03476b
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034770
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034774
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034778
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03477a
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03477e
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034787
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03478c
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034795
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347a1
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347a2
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347a5
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347ab
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347b9
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347bf
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347c7
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347c9
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347ca
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347cc
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347cd
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034761
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034762
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034765
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034766
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03476e
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034773
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034776
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034777
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03477f
+2024-11-22 22:09:51,596 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034783
+2024-11-22 22:09:51,628 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034785
+2024-11-22 22:09:51,628 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03478a
+2024-11-22 22:09:51,628 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034791
+2024-11-22 22:09:51,628 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034793
+2024-11-22 22:09:51,628 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034797
+2024-11-22 22:09:51,628 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d034799
+2024-11-22 22:09:51,628 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03479b
+2024-11-22 22:09:51,628 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d03479d
+2024-11-22 22:09:51,628 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347a6
+2024-11-22 22:09:51,628 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347a8
+2024-11-22 22:09:51,628 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347ac
+2024-11-22 22:09:51,628 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347af
+2024-11-22 22:09:51,628 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347b2
+2024-11-22 22:09:51,628 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347b4
+2024-11-22 22:09:51,628 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347b7
+2024-11-22 22:09:51,628 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347c2
+2024-11-22 22:09:51,628 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347c3
+2024-11-22 22:09:51,628 [WARNING] Invalid 'transaction_date' format in document: 6734416f272f31987d0347d1
+2024-11-22 22:09:51,628 [WARNING] No valid transactions found for ticker 'AAPL' in period '1y'
+2024-11-22 22:10:19,821 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-22 22:11:49,206 [INFO] Retrieved 3839 transactions for ticker 'META' in period '1y'
+2024-11-22 22:15:05,240 [INFO] Retrieved 3839 transactions for ticker 'META' in period '1y'
+2024-11-22 22:15:05,555 [INFO] Retrieved 3839 transactions for ticker 'META' in period '1y'
+2024-11-22 22:16:51,554 [INFO] Retrieved 3839 transactions for ticker 'META' in period '1y'
+2024-11-22 22:17:01,924 [INFO] Retrieved 3839 transactions for ticker 'META' in period '1y'
+2024-11-22 22:19:14,715 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-22 22:21:24,192 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-22 22:22:11,361 [INFO] Retrieved 1 transactions for ticker 'AAPL' in period '1m'
+2024-11-22 22:22:38,927 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 22:28:07,531 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-22 22:28:26,642 [INFO] Retrieved 3839 transactions for ticker 'META' in period '1y'
+2024-11-22 22:28:36,583 [INFO] Retrieved 675 transactions for ticker 'NVDA' in period '1y'
+2024-11-22 22:30:04,492 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-22 22:39:37,234 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-22 22:39:58,942 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-22 22:53:01,989 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-22 22:57:42,505 [INFO] Retrieved 1 transactions for ticker 'AAPL' in period '1m'
+2024-11-22 22:58:04,100 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 23:00:53,607 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-22 23:02:49,817 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-22 23:02:58,228 [INFO] Retrieved 1 transactions for ticker 'AAPL' in period '1m'
+2024-11-22 23:03:04,105 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 23:03:14,688 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 23:03:42,961 [INFO] Retrieved 1 transactions for ticker 'AAPL' in period '1m'
+2024-11-22 23:05:48,152 [INFO] Retrieved 3839 transactions for ticker 'META' in period '1y'
+2024-11-22 23:07:07,844 [INFO] Retrieved 675 transactions for ticker 'NVDA' in period '1y'
+2024-11-22 23:12:24,882 [WARNING] (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "F:\SJSUSTUDY\SemesterStudies\272\pyenvs\cmpe272\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-11-22 23:12:40,459 [INFO] Retrieved 123 transactions for ticker 'AAPL' in period 'None'
+2024-11-22 23:12:57,555 [INFO] Retrieved 675 transactions for ticker 'NVDA' in period '1y'
+2024-11-22 23:22:16,451 [WARNING] No transactions found for ticker 'NVDA' in period '1m'
+2024-11-22 23:22:30,484 [INFO] Retrieved 86 transactions for ticker 'NVDA' in period '3m'
+2024-11-22 23:22:45,966 [INFO] Retrieved 424 transactions for ticker 'NVDA' in period '6m'
+2024-11-22 23:27:45,692 [INFO] Retrieved 424 transactions for ticker 'NVDA' in period '6m'
+2024-11-22 23:31:48,288 [INFO] Retrieved 424 transactions for ticker 'NVDA' in period '6m'
+2024-11-22 23:31:52,066 [WARNING] No transactions found for ticker 'NVDA' in period '1m'
+2024-11-22 23:32:58,966 [INFO] Retrieved 86 transactions for ticker 'NVDA' in period '3m'
+2024-11-22 23:33:47,743 [WARNING] No transactions found for ticker 'NVDA' in period '1m'
+2024-11-22 23:34:03,355 [WARNING] No transactions found for ticker 'NVDA' in period '1m'
+2024-11-22 23:34:24,006 [INFO] Retrieved 86 transactions for ticker 'NVDA' in period '3m'
+2024-11-22 23:34:55,438 [INFO] Retrieved 675 transactions for ticker 'NVDA' in period '1y'
+2024-11-22 23:44:12,968 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-22 23:44:42,248 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 23:44:53,446 [INFO] Retrieved 1 transactions for ticker 'AAPL' in period '1m'
+2024-11-22 23:45:02,480 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-22 23:45:49,177 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 23:48:12,142 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 23:48:25,862 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 23:49:11,040 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 23:49:44,437 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 23:49:46,051 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-22 23:50:07,202 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-22 23:54:04,381 [INFO] Retrieved 1 transactions for ticker 'AAPL' in period '1m'
+2024-11-22 23:54:05,587 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-22 23:54:06,281 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 23:54:33,043 [INFO] Retrieved 86 transactions for ticker 'NVDA' in period '3m'
+2024-11-22 23:54:44,031 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 23:55:29,701 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 23:56:16,041 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 23:56:54,090 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 23:57:16,634 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-22 23:59:49,986 [WARNING] No transactions found for ticker 'AAPL' in period '3m'
+2024-11-23 00:01:28,750 [WARNING] No transactions found for ticker 'AAPL' in period '3m'
+2024-11-23 00:02:26,919 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-23 00:03:49,451 [ERROR] Unexpected error while retrieving transactions for ticker AAPL: 'TransactionModel' object has no attribute 'keys'
+2024-11-23 00:04:04,850 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-23 00:04:43,222 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-23 00:04:54,059 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-23 00:10:14,208 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-23 00:10:29,519 [INFO] Retrieved 1 transactions for ticker 'AAPL' in period '1m'
+2024-11-23 00:10:39,702 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-23 00:13:37,884 [INFO] Retrieved 1 transactions for ticker 'AAPL' in period '1m'
+2024-11-23 00:13:50,755 [INFO] Retrieved 11 transactions for ticker 'META' in period '1m'
+2024-11-23 00:15:03,917 [WARNING] No transactions found for ticker 'NVDA' in period '1m'
+2024-11-23 00:15:17,589 [INFO] Retrieved 81 transactions for ticker 'NVDA' in period '3m'
+2024-11-23 00:15:35,687 [WARNING] No transactions found for ticker 'NVDA' in period '1m'
+2024-11-23 00:16:40,660 [INFO] Retrieved 81 transactions for ticker 'NVDA' in period '3m'

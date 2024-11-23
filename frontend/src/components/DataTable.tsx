@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Paper,
   Table,
@@ -8,6 +8,7 @@ import {
   TableHead,
   TablePagination,
   TableRow,
+  TableSortLabel,
   styled,
 } from '@mui/material';
 
@@ -36,7 +37,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   borderBottom: '1px solid rgba(115, 194, 160, 0.1)',
 }));
 
-const StyledTableRow = styled(TableRow)({
+const StyledTableRow = styled(TableRow)(() => ({
   '&:nth-of-type(odd)': {
     backgroundColor: 'rgba(115, 194, 160, 0.05)',
   },
@@ -47,16 +48,16 @@ const StyledTableRow = styled(TableRow)({
     backgroundColor: 'rgba(115, 194, 160, 0.1)',
     transition: 'background-color 0.2s ease',
   },
-});
+}));
 
-const StyledTableBodyCell = styled(TableCell)({
+const StyledTableBodyCell = styled(TableCell)(() => ({
   color: 'rgba(255, 255, 255, 0.8)',
   textAlign: 'center',
   padding: '16px',
   borderBottom: '1px solid rgba(115, 194, 160, 0.1)',
-});
+}));
 
-const StyledTableContainer = styled(TableContainer)({
+const StyledTableContainer = styled(TableContainer)(() => ({
   backgroundColor: 'transparent',
   '& .MuiTablePagination-root': {
     color: 'rgba(255, 255, 255, 0.8)',
@@ -79,7 +80,7 @@ const StyledTableContainer = styled(TableContainer)({
   '& .MuiIconButton-root': {
     color: 'rgba(255, 255, 255, 0.8)',
   },
-});
+}));
 
 const DataTable: React.FC<DataTableProps> = ({
   tradeData,
@@ -88,18 +89,26 @@ const DataTable: React.FC<DataTableProps> = ({
   handleChangePage,
   handleChangeRowsPerPage,
 }) => {
-  const paginatedData = tradeData.slice(
-    page * rowsPerPage,
-    page * rowsPerPage + rowsPerPage
-  );
+  const [sortColumn, setSortColumn] = useState<string>('date');
+  const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('desc');
 
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-    });
+  const handleSort = (column: string) => {
+    const isAsc = sortColumn === column && sortDirection === 'asc';
+    setSortColumn(column);
+    setSortDirection(isAsc ? 'desc' : 'asc');
   };
+
+  // Filter out invalid dates and dates in the future
+  const filteredData = tradeData.filter((row) => {
+    const date = new Date(row.date);
+    const currentDate = new Date();
+    return (
+      !isNaN(date.getTime()) && // Check if date is valid
+      date <= currentDate && // Ensure date is not in the future
+      row.date !== null && // Ensure date is not null
+      row.date !== undefined // Ensure date is not undefined
+    );
+  });
 
   const getTransactionType = (code: string) => {
     const types: { [key: string]: string } = {
@@ -114,16 +123,98 @@ const DataTable: React.FC<DataTableProps> = ({
     return types[code] || code;
   };
 
+  const sortedData = [...filteredData].sort((a, b) => {
+    if (sortColumn === 'date') {
+      const dateA = new Date(a.date).getTime();
+      const dateB = new Date(b.date).getTime();
+      return sortDirection === 'asc' ? dateA - dateB : dateB - dateA;
+    } else if (sortColumn === 'shares') {
+      return sortDirection === 'asc' ? a.shares - b.shares : b.shares - a.shares;
+    } else if (sortColumn === 'price_per_share') {
+      return sortDirection === 'asc'
+        ? a.price_per_share - b.price_per_share
+        : b.price_per_share - a.price_per_share;
+    } else if (sortColumn === 'transaction_code') {
+      const typeA = getTransactionType(a.transaction_code);
+      const typeB = getTransactionType(b.transaction_code);
+      return sortDirection === 'asc'
+        ? typeA.localeCompare(typeB)
+        : typeB.localeCompare(typeA);
+    } else if (sortColumn === 'total_value') {
+      const totalA = a.shares * (a.price_per_share || 0);
+      const totalB = b.shares * (b.price_per_share || 0);
+      return sortDirection === 'asc' ? totalA - totalB : totalB - totalA;
+    }
+    return 0;
+  });
+
+  const paginatedData = sortedData.slice(
+    page * rowsPerPage,
+    page * rowsPerPage + rowsPerPage
+  );
+
+  const formatDate = (dateString: string) => {
+    const parsedDate = new Date(dateString);
+    if (isNaN(parsedDate.getTime())) {
+      return 'Invalid Date';
+    }
+    return parsedDate.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    });
+  };
+
   return (
     <StyledTableContainer>
       <Table>
         <TableHead>
           <TableRow>
-            <StyledTableCell>Date</StyledTableCell>
-            <StyledTableCell>Transaction Type</StyledTableCell>
-            <StyledTableCell>Shares</StyledTableCell>
-            <StyledTableCell>Price Per Share</StyledTableCell>
-            <StyledTableCell>Total Value</StyledTableCell>
+            <StyledTableCell>
+              <TableSortLabel
+                active={sortColumn === 'date'}
+                direction={sortDirection}
+                onClick={() => handleSort('date')}
+              >
+                Date
+              </TableSortLabel>
+            </StyledTableCell>
+            <StyledTableCell>
+              <TableSortLabel
+                active={sortColumn === 'transaction_code'}
+                direction={sortDirection}
+                onClick={() => handleSort('transaction_code')}
+              >
+                Transaction Type
+              </TableSortLabel>
+            </StyledTableCell>
+            <StyledTableCell>
+              <TableSortLabel
+                active={sortColumn === 'shares'}
+                direction={sortDirection}
+                onClick={() => handleSort('shares')}
+              >
+                Shares
+              </TableSortLabel>
+            </StyledTableCell>
+            <StyledTableCell>
+              <TableSortLabel
+                active={sortColumn === 'price_per_share'}
+                direction={sortDirection}
+                onClick={() => handleSort('price_per_share')}
+              >
+                Price Per Share
+              </TableSortLabel>
+            </StyledTableCell>
+            <StyledTableCell>
+              <TableSortLabel
+                active={sortColumn === 'total_value'}
+                direction={sortDirection}
+                onClick={() => handleSort('total_value')}
+              >
+                Total Value
+              </TableSortLabel>
+            </StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -135,18 +226,20 @@ const DataTable: React.FC<DataTableProps> = ({
                   {getTransactionType(row.transaction_code)}
                 </StyledTableBodyCell>
                 <StyledTableBodyCell>
-                  {row.shares.toLocaleString()}
+                  {row.shares?.toLocaleString() || 'N/A'}
                 </StyledTableBodyCell>
                 <StyledTableBodyCell>
-                  ${typeof row.price_per_share === 'number' 
-                    ? row.price_per_share.toLocaleString(undefined, {
-                        minimumFractionDigits: 2,
-                        maximumFractionDigits: 2,
-                      })
-                    : row.price_per_share}
+                  $
+                  {row.price_per_share?.toLocaleString(undefined, {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  }) || 'N/A'}
                 </StyledTableBodyCell>
                 <StyledTableBodyCell>
-                  ${(row.shares * Number(row.price_per_share)).toLocaleString(undefined, {
+                  $
+                  {(
+                    row.shares * (row.price_per_share || 0)
+                  ).toLocaleString(undefined, {
                     minimumFractionDigits: 2,
                     maximumFractionDigits: 2,
                   })}
@@ -165,7 +258,7 @@ const DataTable: React.FC<DataTableProps> = ({
       <TablePagination
         rowsPerPageOptions={[5, 10, 25, 50]}
         component="div"
-        count={tradeData.length}
+        count={filteredData.length}
         rowsPerPage={rowsPerPage}
         page={page}
         onPageChange={handleChangePage}

@@ -8,8 +8,8 @@ const API_ENDPOINTS = {
     `${BASE_URL}/transactions/${company}?time_period=${timePeriod}`,
 
   // Account
-  getUserDetails: `${BASE_URL}/user/details`,
-  updateUserProfile: `${BASE_URL}/user/profile/update`,
+  getUserDetails: `${BASE_URL}/auth/me`,
+  updateUserProfile: `${BASE_URL}/auth/me/update`,
 
   // Features
   fetchFeatureData: `${BASE_URL}/features`,

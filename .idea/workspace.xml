@@ -4,27 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd2f1d8b-bff9-4512-8112-6e44aa69e5d0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/CMPE272GenAIProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/TradeChart.tsx" afterDir="false" />
+    <list default="true" id="190c17de-3131-4481-a2cf-9176822ce2dd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Dockerrun.aws.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/.ebextensions/launch-config.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/transaction_service.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.ebextensions/launch-config.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.ebignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CMPE272GenAIProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CMPE272GenAIProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/project.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/routers/auth_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routers/auth_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routers/forecast_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routers/forecast_router.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/routers/sec_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routers/sec_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routers/stock_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routers/stock_router.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/services/sec_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/sec_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/stock_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/stock_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Account.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ChartContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ChartContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/DataTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/DataTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/InsiderTradingChats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/InsiderTradingChats.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/PieChartContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/PieChartContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/Dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Dashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/SignUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/SignUp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transaction_service.log" beforeDir="false" afterPath="$PROJECT_DIR$/transaction_service.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/utils/apiEndpoints.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/utils/apiEndpoints.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction_service.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +50,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jupyter Notebook" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
       </list>
     </option>
@@ -43,42 +57,38 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;pratikkorat26&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "pratikkorat26"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/pratikkorat26/CMPE272GenAIProject.git&quot;,
-    &quot;accountId&quot;: &quot;a631715e-3cdf-454f-87c4-639a29ba339a&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/pratikkorat26/CMPE272GenAIProject.git",
+    "accountId": "a35f6ea7-de04-460a-81c2-16f7f0e0b89e"
   }
-}</component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
-}</component>
-  <component name="ProjectId" id="2mUEn4v13pxzbJuOIepCNz6p7kF" />
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2pEeeLxgk1hN3ldrQobGsxBueDG" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "F:/SJSUSTUDY/SemesterStudies/272/CMPE272GenAIProject",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "inlay.hints",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable",
     "ts.external.directory.path": "F:\\SJSUSTUDY\\SemesterStudies\\272\\CMPE272GenAIProject\\frontend\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -86,38 +96,24 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-c69650fc56ca-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.15619.17" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PY-243.21565.199" />
+        <option value="bundled-python-sdk-cab1f2013843-4ae2d6a61b08-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.21565.199" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fd2f1d8b-bff9-4512-8112-6e44aa69e5d0" name="Changes" comment="" />
-      <created>1727122917344</created>
+      <changelist id="190c17de-3131-4481-a2cf-9176822ce2dd" name="Changes" comment="" />
+      <created>1732335761349</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1727122917344</updated>
-      <workItem from="1727122918427" duration="1614000" />
-      <workItem from="1727327437182" duration="7373000" />
-      <workItem from="1731474769891" duration="1634000" />
-      <workItem from="1731476674654" duration="8791000" />
-      <workItem from="1731517008601" duration="3998000" />
+      <updated>1732335761349</updated>
+      <workItem from="1732335761941" duration="12700000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
