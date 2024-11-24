@@ -44,6 +44,10 @@ async def signup(user: User) -> MessageResponse:
         "name": user.name,
         "email": user.email,
         "hashed_password": hashed_password,
+        "created_at": datetime.utcnow(),
+        "login_type": "normal",
+        "first_name": user.name.split(" ")[0],
+        "family_name": user.name.split(" ")[1]
     }
 
     # Insert the user into the database
@@ -103,6 +107,7 @@ async def login(
             new_user = {
                 "first_name": decoded_token.get("given_name", ""),
                 "last_name": decoded_token.get("family_name", ""),
+                "name": decoded_token.get("given_name", "") + " " + decoded_token.get("family_name", ""),
                 "email": email,
                 "hashed_password": None,
                 "created_at": datetime.utcnow(),

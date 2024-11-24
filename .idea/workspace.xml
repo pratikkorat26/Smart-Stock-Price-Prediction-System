@@ -5,42 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="190c17de-3131-4481-a2cf-9176822ce2dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerrun.aws.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.ebextensions/launch-config.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/transaction_service.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.ebextensions/launch-config.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.ebignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CMPE272GenAIProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CMPE272GenAIProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/ForecastChartContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/utils/Pratik.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/forecast.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/forecast.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/routers/auth_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routers/auth_router.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/routers/forecast_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routers/forecast_router.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routers/sec_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routers/sec_router.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routers/stock_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routers/stock_router.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/sec_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/sec_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/stock_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/stock_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ChartContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ChartContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/DataTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/DataTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/InsiderTradingChats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/InsiderTradingChats.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/PieChartContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/PieChartContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/transaction_service.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/transaction_service.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/About.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/Dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Dashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/utils/apiEndpoints.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/utils/apiEndpoints.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transaction_service.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Script" />
         <option value="TypeScript JSX File" />
       </list>
     </option>
@@ -57,22 +31,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "pratikkorat26"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;pratikkorat26&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/pratikkorat26/CMPE272GenAIProject.git",
-    "accountId": "a35f6ea7-de04-460a-81c2-16f7f0e0b89e"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/pratikkorat26/CMPE272GenAIProject.git&quot;,
+    &quot;accountId&quot;: &quot;a35f6ea7-de04-460a-81c2-16f7f0e0b89e&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2pEeeLxgk1hN3ldrQobGsxBueDG" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -83,6 +57,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "F:/SJSUSTUDY/SemesterStudies/272/CMPE272GenAIProject/frontend/src/utils",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -93,6 +68,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\SJSUSTUDY\SemesterStudies\272\CMPE272GenAIProject\frontend\src\utils" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -109,7 +89,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732335761349</updated>
-      <workItem from="1732335761941" duration="12700000" />
+      <workItem from="1732335761941" duration="17034000" />
+      <workItem from="1732387358600" duration="10856000" />
     </task>
     <servers />
   </component>

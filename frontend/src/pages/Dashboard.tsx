@@ -3,16 +3,16 @@ import {
   Box,
   Typography,
   Container,
-  Switch,
-  FormControlLabel,
   Button,
   ButtonGroup,
+  CircularProgress,
 } from '@mui/material';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import DataTable from '../components/DataTable';
 import ChartContainer from '../components/ChartContainer';
+import ForecastChartContainer from '../components/ForecastChartContainer';
 import SearchBar from '../components/SearchBar';
 import CompanyList from '../components/CompanyList';
 import InsiderTradingChats from '../components/InsiderTradingChats';
@@ -28,7 +28,6 @@ const TIME_PERIODS = {
 
 const COMPANIES = ['AAPL', 'META', 'NVDA'];
 
-// Color palette matching theme and landing
 const COLORS = {
   primary: '#00D09C',
   secondary: '#1A1A1A',
@@ -46,6 +45,9 @@ const COLORS = {
   chart: {
     price: '#73C2A0',
     volume: '#A8E6CF',
+    forecast: '#FF0000', // Red color for forecast
+    trend: '#FFA500', // Orange color for trend
+    seasonal: '#0000FF', // Blue color for seasonal
   },
 };
 
@@ -61,8 +63,11 @@ const Dashboard: React.FC<DashboardProps> = () => {
   const [tradeData, setTradeData] = useState<any[]>([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [forecastData, setForecastData] = useState<any[]>([]);
   const [isLogScaleShares, setIsLogScaleShares] = useState(false);
   const [isLogScalePrice, setIsLogScalePrice] = useState(false);
+  const [isPredicting, setIsPredicting] = useState(false); // Loading state for prediction
+  const [showForecast, setShowForecast] = useState(false); // State to manage forecast chart visibility
   const navigate = useNavigate();
 
   const token = localStorage.getItem('authToken');
@@ -80,6 +85,7 @@ const Dashboard: React.FC<DashboardProps> = () => {
     setSelectedCompany(company);
     setSearchTerm('');
     setShowCompanyList(false);
+    setShowForecast(false); // Hide forecast chart when a new company is selected
   };
 
   const handleTimePeriodChange = (period: string) => {
@@ -87,74 +93,105 @@ const Dashboard: React.FC<DashboardProps> = () => {
   };
 
   const fetchStockData = async () => {
-  if (!selectedCompany || !token) return;
-  try {
-    const url = API_ENDPOINTS.getStocks(selectedCompany, selectedTimePeriod);
-    const data = await fetchData(url, token);
+    if (!selectedCompany || !token) return;
+    try {
+      const url = API_ENDPOINTS.getStocks(selectedCompany, selectedTimePeriod);
+      const data = await fetchData(url, token);
 
-    // Filter, validate, and format data
-    const formattedData = data
-      .filter((item: any) => item.date) // Filter out entries without a date
-      .map((item: any) => ({
-        date: new Date(item.date).toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'short',
-          day: 'numeric',
-        }),
-        open: item.open ?? 0,
-        close: item.close ?? 0,
-        high: item.high ?? 0,
-        low: item.low ?? 0,
-      }))
-      .sort((a: any, b: any) => new Date(a.date).getTime() - new Date(b.date).getTime()); // Sort by date
+      const formattedData = data
+        .filter((item: any) => item.date)
+        .map((item: any) => ({
+          date: new Date(item.date).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+          }),
+          open: item.open ?? 0,
+          close: item.close ?? 0,
+          high: item.high ?? 0,
+          low: item.low ?? 0,
+        }))
+        .sort((a: any, b: any) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
-    setStockData(formattedData);
-  } catch (error: any) {
-    console.error('Error fetching stock data:', error);
-    if (error.message.includes('401')) {
-      localStorage.removeItem('authToken');
-      navigate('/login');
+      setStockData(formattedData);
+      console.log('Stock data:', formattedData);
+    } catch (error: any) {
+      console.error('Error fetching stock data:', error);
+      if (error.message.includes('401')) {
+        localStorage.removeItem('authToken');
+        navigate('/login');
+      }
     }
-  }
-};
+  };
 
+  const futureForecast = async (formattedData: any[]) => {
+    if (!formattedData || formattedData.length === 0) {
+      console.error('No formatted data available for forecasting');
+      return;
+    }
 
-const fetchTradeData = async () => {
-  if (!selectedCompany || !token) return;
-  try {
-    const url = API_ENDPOINTS.getTransactions(selectedCompany, selectedTimePeriod);
-    const data = await fetchData(url, token);
+    setIsPredicting(true); // Start loading
+    try {
+      const forecastUrl = "http://localhost:8000/future";
+      const token = localStorage.getItem('authToken'); // Retrieve the token from local storage
 
-    // Filter data to keep only entries with valid transaction_date
-    const filteredTrades = data.filter((trade: any) => {
-      const transactionDate = new Date(trade.transaction_date);
-      return !isNaN(transactionDate.getTime()); // Keep if transaction_date is a valid date
-    });
+      const forecastResponse = await fetch(forecastUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`, // Include the token in the headers
+        },
+        body: JSON.stringify(formattedData), // Send formatted data directly
+      });
+      console.log("Forecast response:", forecastResponse);
+      if (!forecastResponse.ok) {
+        throw new Error(`Error from forecast API: ${forecastResponse.statusText}`);
+      }
 
-    // Format and sort the filtered data by transaction_date (latest to oldest)
-    const formattedTrades = filteredTrades
-      .map((trade: any) => ({
-        filing_date: trade.filing_date, // Keep other relevant fields if needed
-        date: trade.transaction_date, // Preserve the original transaction date
-        formatted_date: new Date(trade.transaction_date).toLocaleDateString('en-US'), // Formatted date for display
-        shares: Number(trade.shares) || 0,
-        transaction_code: trade.transaction_code,
-        price_per_share: trade.price_per_share,
-        ownership_type: trade.ownership_type,
-        issuer_name: trade.issuer_name,
-        security_title: trade.security_title,
-      }))
-      .sort((a: { date: string }, b: { date: string }) => {
-        return new Date(b.date).getTime() - new Date(a.date).getTime(); // Sort latest to oldest
+      const forecastData = await forecastResponse.json();
+      console.log("Forecast data:", forecastData);
+
+      setForecastData(forecastData); // Store forecast data
+      setShowForecast(true); // Show forecast chart
+    } catch (error: any) {
+      console.error('Error during forecasting:', error);
+    } finally {
+      setIsPredicting(false); // Stop loading
+    }
+  };
+
+  const fetchTradeData = async () => {
+    if (!selectedCompany || !token) return;
+    try {
+      const url = API_ENDPOINTS.getTransactions(selectedCompany, selectedTimePeriod);
+      const data = await fetchData(url, token);
+
+      const filteredTrades = data.filter((trade: any) => {
+        const transactionDate = new Date(trade.transaction_date);
+        return !isNaN(transactionDate.getTime());
       });
 
-    setTradeData(formattedTrades);
-  } catch (error) {
-    console.error('Error fetching insider trade data:', error);
-  }
-};
+      const formattedTrades = filteredTrades
+        .map((trade: any) => ({
+          filing_date: trade.filing_date,
+          date: trade.transaction_date,
+          formatted_date: new Date(trade.transaction_date).toLocaleDateString('en-US'),
+          shares: Number(trade.shares) || 0,
+          transaction_code: trade.transaction_code,
+          price_per_share: trade.price_per_share,
+          ownership_type: trade.ownership_type,
+          issuer_name: trade.issuer_name,
+          security_title: trade.security_title,
+        }))
+        .sort((a: { date: string }, b: { date: string }) => {
+          return new Date(b.date).getTime() - new Date(a.date).getTime();
+        });
 
-
+      setTradeData(formattedTrades);
+    } catch (error) {
+      console.error('Error fetching insider trade data:', error);
+    }
+  };
 
   useEffect(() => {
     if (token && selectedCompany) {
@@ -235,7 +272,6 @@ const fetchTradeData = async () => {
             </Typography>
           )}
 
-          {/* Time period selector moved here and only shown when a company is selected */}
           {selectedCompany && (
             <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
               <ButtonGroup>
@@ -299,6 +335,61 @@ const fetchTradeData = async () => {
                 isLogScale={isLogScalePrice}
               />
             </Box>
+
+            <Box sx={{ display: 'flex', justifyContent: 'center', mb: 4 }}>
+              <Button
+                onClick={() => futureForecast(stockData)}
+                disabled={isPredicting}
+                sx={{
+                  backgroundColor: COLORS.accent,
+                  color: COLORS.secondary,
+                  textTransform: 'none',
+                  px: 4,
+                  py: 1,
+                  '&:hover': {
+                    backgroundColor: COLORS.accent,
+                    color: COLORS.secondary,
+                    transform: 'translateY(-2px)',
+                    transition: 'all 0.2s ease-in-out',
+                  },
+                }}
+              >
+                {isPredicting ? 'Predicting...' : 'Predict'}
+              </Button>
+            </Box>
+
+            {isPredicting && (
+              <Box sx={{ display: 'flex', justifyContent: 'center', mb: 4 }}>
+                <CircularProgress />
+              </Box>
+            )}
+
+            {showForecast && (
+              <Box sx={{
+                mb: 6,
+                background: COLORS.background.card,
+                p: 4,
+                borderRadius: '16px',
+                transition: 'transform 0.3s ease',
+                '&:hover': {
+                  transform: 'translateY(-4px)',
+                },
+              }}>
+                <ForecastChartContainer
+                  title="Predicted Stock Price Trends"
+                  data={forecastData}
+                  dataKey="open"
+                  lineColor={COLORS.chart.forecast}
+                  isLogScale={isLogScalePrice}
+                  additionalLines={[
+                    { dataKey: 'trend', lineColor: COLORS.chart.trend, title: 'Trend' },
+                    { dataKey: 'seasonal', lineColor: COLORS.chart.seasonal, title: 'Seasonal' },
+                  ]}
+                  areaDataKeyLower="yhat_lower"
+                  areaDataKeyUpper="yhat_upper"
+                />
+              </Box>
+            )}
 
             <Box sx={{
               mb: 6,

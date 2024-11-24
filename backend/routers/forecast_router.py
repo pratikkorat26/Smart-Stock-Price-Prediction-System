@@ -1,25 +1,21 @@
 from fastapi import APIRouter, HTTPException, Depends
 from fastapi.security import OAuth2PasswordBearer
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import List
 import pandas as pd
+import numpy as np
 from prophet import Prophet
 from starlette import status
-
-from models.forecast import ForecastIO
+from datetime import datetime, timedelta
 from services.auth_services import decode_access_token
+import logging
 
 # FastAPI Router Setup
 forecast_router = APIRouter()
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token")
 
-
-# Dependency: Extract and verify the current user
 def get_current_user(token: str = Depends(oauth2_scheme)):
-    """
-    Dependency that extracts and verifies the current user from the token.
-    """
-    user = decode_access_token(token)  # Replace with your own implementation
+    user = decode_access_token(token)
     if not user:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
@@ -28,60 +24,135 @@ def get_current_user(token: str = Depends(oauth2_scheme)):
         )
     return user
 
+def compute_rsi(series: pd.Series, window: int) -> pd.Series:
+    """Compute Relative Strength Index (RSI)."""
+    delta = series.diff()
+    up = delta.clip(lower=0)
+    down = -1 * delta.clip(upper=0)
+    roll_up = up.rolling(window).mean()
+    roll_down = down.rolling(window).mean()
+    rs = roll_up / roll_down
+    return 100 - (100 / (1 + rs))
 
-# Forecast Endpoint
-@forecast_router.post("/future", response_model=List[ForecastIO])
+def prepare_training_data(data: List[dict]) -> pd.DataFrame:
+    """Prepare and clean training data for Prophet."""
+    # Convert input data to DataFrame
+    df = pd.DataFrame([
+        {
+            "ds": datetime.strptime(item['date'], "%b %d, %Y"),
+            "y": item['open'],
+        }
+        for item in data
+    ])
+
+    # Sort by date and filter for the last week
+    df = df.sort_values('ds')
+    one_week_ago = df['ds'].max() - timedelta(days=7)
+    df = df[df['ds'] >= one_week_ago]
+
+    # Feature Engineering
+    df['volatility'] = df['y'].rolling(window=5).std()
+    df['returns'] = df['y'].pct_change()
+    df['rolling_mean'] = df['y'].rolling(window=5).mean()
+    df['ema'] = df['y'].ewm(span=3, adjust=False).mean()
+    df['rsi'] = compute_rsi(df['y'], window=3)
+
+    # Lagged Features
+    for lag in range(1, 4):
+        df[f'lag_{lag}'] = df['y'].shift(lag)
+
+    # Handle missing values
+    df = df.fillna(method='ffill').fillna(method='bfill')
+
+    return df
+
+def calculate_dynamic_capacity(df: pd.DataFrame) -> float:
+    """Calculate dynamic capacity based on historical volatility and trend."""
+    latest_price = df['y'].iloc[-1]
+    volatility = df['y'].std()
+    trend = (df['y'].iloc[-1] - df['y'].iloc[0]) / len(df)
+
+    # Calculate capacity as a multiple of current price, adjusted for volatility and trend
+    volatility_factor = 1 + (volatility / latest_price)
+    trend_factor = 1 + max(0, trend / latest_price)
+
+    return latest_price * volatility_factor * trend_factor * 2.5
+
+@forecast_router.post("/future", response_model=List[dict])
 async def generate_forecast(
-    data: List[ForecastIO],  # List of shared input/output model
-    user: dict = Depends(get_current_user),
+        data: List[dict],
+        user: dict = Depends(get_current_user),
 ):
-    """
-    Generate a 7-day forecast using Prophet for the given data.
-    """
+    """Generate a 30-day forecast using enhanced Prophet model without seasonality."""
     try:
-        # Convert input data to a DataFrame compatible with Prophet
-        df = pd.DataFrame([
-            {
-                "ticker": item.ticker,
-                "ds": item.date,  # Prophet requires `ds` for dates
-                "y": item.open  # Prophet requires `y` as the target column
-            }
-            for item in data
-        ])
+        # Prepare training data
+        df = prepare_training_data(data)
 
-        # Initialize and train the Prophet model
-        model = Prophet()
-        model.fit(df[["ds", "y"]])
+        # Calculate dynamic capacity
+        capacity = calculate_dynamic_capacity(df)
+        df['cap'] = capacity
+        df['floor'] = 0  # Set floor to prevent negative predictions
 
-        # Generate future dates and predictions
-        future = model.make_future_dataframe(periods=7)
+        # Initialize Prophet with adjusted parameters
+        model = Prophet(
+            growth='logistic',
+            yearly_seasonality=False,
+            weekly_seasonality=False,
+            daily_seasonality=False,
+            seasonality_mode='multiplicative',
+            changepoint_prior_scale=0.5,  # Increased to allow more flexibility in trend changes
+            interval_width=0.8  # Adjusted for more confident prediction intervals
+        )
+
+        # Fit the model
+        model.fit(df[["ds", "y", "cap", "floor"]])
+
+        # Generate future dates
+        future = model.make_future_dataframe(periods=30, freq='D', include_history=False)
+
+        # Add capacity and floor to future dataframe
+        future['cap'] = capacity
+        future['floor'] = 0
+
+        # Make predictions
         forecast = model.predict(future)
 
-        # Extract the last 7 predictions and format the output
-        result = forecast[["ds", "yhat"]].tail(7)
+        # Extract relevant components
+        result = forecast[["ds", "yhat", "yhat_lower", "yhat_upper", "trend", "trend_lower", "trend_upper"]]
+
+        # Calculate additional metrics
+        result['momentum'] = np.gradient(result['trend'])
+        result['acceleration'] = np.gradient(result['momentum'])
+
+        # Format output
         output = [
-            ForecastIO(
-                ticker=data[0].ticker,  # Assuming all data has the same ticker
-                date=row["ds"].strftime("%Y-%m-%d"),
-                open=row["yhat"],  # Predicted open value
-                high=None,
-                low=None,
-                close=None,
-                volume=None,
-                dividends=None,
-                stock_split=None,
-            )
+            {
+                "date": row["ds"].strftime("%d %b, %Y"),
+                "open": float(row["yhat"]),
+                "high": float(row["yhat_upper"]),
+                "low": float(row["yhat_lower"]),
+                "close": None,
+                "trend": float(row["trend"]),
+                "trend_lower": float(row["trend_lower"]),
+                "trend_upper": float(row["trend_upper"]),
+                "yhat_lower": float(row["yhat_lower"]),
+                "yhat_upper": float(row["yhat_upper"]),
+                "momentum": float(row["momentum"]),
+                "acceleration": float(row["acceleration"]),
+            }
             for _, row in result.iterrows()
         ]
 
         return output
 
     except ValueError as ve:
+        logging.error(f"ValueError: {str(ve)}")
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail=f"ValueError: {str(ve)}"
         )
     except Exception as e:
+        logging.error(f"An error occurred: {str(e)}")
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"An error occurred: {str(e)}"
