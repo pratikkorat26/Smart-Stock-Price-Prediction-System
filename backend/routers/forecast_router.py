@@ -41,14 +41,17 @@ def prepare_training_data(data: List[dict]) -> pd.DataFrame:
         {
             "ds": datetime.strptime(item['date'], "%b %d, %Y"),
             "y": item['open'],
+            "high": item['high'],
+            "low": item['low'],
+            "close": item['close']
         }
         for item in data
     ])
 
-    # Sort by date and filter for the last week
+    # Sort by date and filter for the last 90 days
     df = df.sort_values('ds')
-    one_week_ago = df['ds'].max() - timedelta(days=7)
-    df = df[df['ds'] >= one_week_ago]
+    three_months_ago = df['ds'].max() - timedelta(days=90)
+    df = df[df['ds'] >= three_months_ago]
 
     # Feature Engineering
     df['volatility'] = df['y'].rolling(window=5).std()
@@ -100,19 +103,26 @@ async def generate_forecast(
             weekly_seasonality=False,
             daily_seasonality=False,
             seasonality_mode='multiplicative',
-            changepoint_prior_scale=0.5,  # Increased to allow more flexibility in trend changes
-            interval_width=0.8  # Adjusted for more confident prediction intervals
+            changepoint_prior_scale=0.8,  # Increased to allow more flexibility in trend changes
+            interval_width=0.95  # Adjusted for more confident prediction intervals
         )
 
+        # Add regressors to the model
+        regressors = ['volatility', 'returns', 'rolling_mean', 'ema', 'rsi', 'high', 'low', 'close']
+        for regressor in regressors:
+            model.add_regressor(regressor)
+
         # Fit the model
-        model.fit(df[["ds", "y", "cap", "floor"]])
+        model.fit(df[["ds", "y", "cap", "floor"] + regressors])
 
         # Generate future dates
         future = model.make_future_dataframe(periods=30, freq='D', include_history=False)
 
-        # Add capacity and floor to future dataframe
+        # Add capacity, floor, and regressors to future dataframe
         future['cap'] = capacity
         future['floor'] = 0
+        for regressor in regressors:
+            future[regressor] = df[regressor].iloc[-1]  # Use the last known value for simplicity
 
         # Make predictions
         forecast = model.predict(future)
@@ -121,8 +131,14 @@ async def generate_forecast(
         result = forecast[["ds", "yhat", "yhat_lower", "yhat_upper", "trend", "trend_lower", "trend_upper"]]
 
         # Calculate additional metrics
-        result['momentum'] = np.gradient(result['trend'])
-        result['acceleration'] = np.gradient(result['momentum'])
+        result.loc[:, 'momentum'] = np.gradient(result['trend'])
+        result.loc[:, 'acceleration'] = np.gradient(result['momentum'])
+
+        # Add random noise to the predictions
+        noise_factor = 0.05  # Adjust the noise factor as needed
+        result.loc[:, 'yhat'] += result['yhat'] * noise_factor * (np.random.rand(len(result)) - 0.5)
+        result.loc[:, 'yhat_lower'] += result['yhat_lower'] * noise_factor * (np.random.rand(len(result)) - 0.5)
+        result.loc[:, 'yhat_upper'] += result['yhat_upper'] * noise_factor * (np.random.rand(len(result)) - 0.5)
 
         # Format output
         output = [

@@ -939,3 +939,428 @@ cwd: None
 2024-11-23 13:01:17,204 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=12728', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp7khvw9j5\\is_qr6bb.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp7khvw9j5\\7b2wgarb.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp7khvw9j5\\prophet_modelh3pj_6at\\prophet_model-20241123130117.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
 2024-11-23 13:01:17,204 [INFO] Chain [1] start processing
 2024-11-23 13:01:17,570 [INFO] Chain [1] done processing
+2024-11-23 13:02:45,308 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-23 13:02:45,398 [DEBUG] Adding TBB (F:\SJSUSTUDY\SemesterStudies\272\pyenvs\cmpe272\Lib\site-packages\prophet\stan_model\cmdstan-2.33.1\stan\lib\stan_math\lib\tbb) to PATH
+2024-11-23 13:02:45,416 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-23 13:02:45,418 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\0t8u6ong.json
+2024-11-23 13:02:45,419 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\shieupy0.json
+2024-11-23 13:02:45,420 [DEBUG] idx 0
+2024-11-23 13:02:45,421 [DEBUG] running CmdStan, num_threads: None
+2024-11-23 13:02:45,421 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=38536', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\0t8u6ong.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\shieupy0.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\prophet_model06v1zyjj\\prophet_model-20241123130245.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-23 13:02:45,421 [INFO] Chain [1] start processing
+2024-11-23 13:02:45,461 [INFO] Chain [1] done processing
+2024-11-23 13:03:00,955 [INFO] Retrieved 3822 transactions for ticker 'META' in period '1y'
+2024-11-23 13:03:03,292 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-23 13:03:03,381 [DEBUG] TBB already found in load path
+2024-11-23 13:03:03,392 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-23 13:03:03,394 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\q0qq6e57.json
+2024-11-23 13:03:03,395 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\o3yzg25o.json
+2024-11-23 13:03:03,396 [DEBUG] idx 0
+2024-11-23 13:03:03,396 [DEBUG] running CmdStan, num_threads: None
+2024-11-23 13:03:03,396 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=14320', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\q0qq6e57.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\o3yzg25o.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\prophet_modelmmz864b_\\prophet_model-20241123130303.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-23 13:03:03,396 [INFO] Chain [1] start processing
+2024-11-23 13:03:03,453 [INFO] Chain [1] done processing
+2024-11-23 13:05:08,287 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-23 13:05:08,425 [DEBUG] TBB already found in load path
+2024-11-23 13:05:08,442 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-23 13:05:08,445 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\z72lvxph.json
+2024-11-23 13:05:08,447 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\vbobc_6c.json
+2024-11-23 13:05:08,448 [DEBUG] idx 0
+2024-11-23 13:05:08,448 [DEBUG] running CmdStan, num_threads: None
+2024-11-23 13:05:08,449 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=22362', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\z72lvxph.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\vbobc_6c.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\prophet_modelocvbmi66\\prophet_model-20241123130508.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-23 13:05:08,449 [INFO] Chain [1] start processing
+2024-11-23 13:05:08,503 [INFO] Chain [1] done processing
+2024-11-23 13:07:25,240 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-23 13:07:25,414 [DEBUG] TBB already found in load path
+2024-11-23 13:07:25,436 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-23 13:07:25,440 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\1zqr8w4k.json
+2024-11-23 13:07:25,441 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\onkjt6k2.json
+2024-11-23 13:07:25,443 [DEBUG] idx 0
+2024-11-23 13:07:25,443 [DEBUG] running CmdStan, num_threads: None
+2024-11-23 13:07:25,446 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=13899', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\1zqr8w4k.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\onkjt6k2.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\prophet_model1_p1aonb\\prophet_model-20241123130725.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-23 13:07:25,446 [INFO] Chain [1] start processing
+2024-11-23 13:07:25,503 [INFO] Chain [1] done processing
+2024-11-23 13:08:05,666 [INFO] Retrieved 673 transactions for ticker 'NVDA' in period '1y'
+2024-11-23 13:08:08,944 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-23 13:08:09,031 [DEBUG] TBB already found in load path
+2024-11-23 13:08:09,045 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-23 13:08:09,047 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\2jhs3h19.json
+2024-11-23 13:08:09,049 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\ulwg1chm.json
+2024-11-23 13:08:09,050 [DEBUG] idx 0
+2024-11-23 13:08:09,050 [DEBUG] running CmdStan, num_threads: None
+2024-11-23 13:08:09,051 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=1096', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\2jhs3h19.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\ulwg1chm.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\prophet_modelc9u1dwop\\prophet_model-20241123130809.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-23 13:08:09,051 [INFO] Chain [1] start processing
+2024-11-23 13:08:09,113 [INFO] Chain [1] done processing
+2024-11-23 13:08:34,246 [INFO] Retrieved 419 transactions for ticker 'NVDA' in period '6m'
+2024-11-23 13:08:35,869 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-23 13:08:35,955 [DEBUG] TBB already found in load path
+2024-11-23 13:08:35,966 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-23 13:08:35,968 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\bqfm88bp.json
+2024-11-23 13:08:35,969 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\p77gygi1.json
+2024-11-23 13:08:35,970 [DEBUG] idx 0
+2024-11-23 13:08:35,971 [DEBUG] running CmdStan, num_threads: None
+2024-11-23 13:08:35,971 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=45574', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\bqfm88bp.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\p77gygi1.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\prophet_model9hv9l56h\\prophet_model-20241123130835.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-23 13:08:35,971 [INFO] Chain [1] start processing
+2024-11-23 13:08:36,027 [INFO] Chain [1] done processing
+2024-11-23 13:09:47,669 [INFO] Retrieved 673 transactions for ticker 'NVDA' in period '1y'
+2024-11-23 13:09:49,048 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-23 13:09:49,141 [DEBUG] TBB already found in load path
+2024-11-23 13:09:49,152 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-23 13:09:49,154 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\idf6lx_x.json
+2024-11-23 13:09:49,155 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\nk96ys2l.json
+2024-11-23 13:09:49,156 [DEBUG] idx 0
+2024-11-23 13:09:49,157 [DEBUG] running CmdStan, num_threads: None
+2024-11-23 13:09:49,157 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=60176', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\idf6lx_x.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\nk96ys2l.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\prophet_model4ipo73n_\\prophet_model-20241123130949.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-23 13:09:49,157 [INFO] Chain [1] start processing
+2024-11-23 13:09:49,214 [INFO] Chain [1] done processing
+2024-11-23 13:10:36,836 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-23 13:10:39,161 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-23 13:10:39,251 [DEBUG] TBB already found in load path
+2024-11-23 13:10:39,253 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-23 13:10:39,263 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\ukkvixg0.json
+2024-11-23 13:10:39,263 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\6afzrfbi.json
+2024-11-23 13:10:39,263 [DEBUG] idx 0
+2024-11-23 13:10:39,263 [DEBUG] running CmdStan, num_threads: None
+2024-11-23 13:10:39,263 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=13691', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\ukkvixg0.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\6afzrfbi.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\prophet_modelnnxql7ap\\prophet_model-20241123131039.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-23 13:10:39,263 [INFO] Chain [1] start processing
+2024-11-23 13:10:39,317 [INFO] Chain [1] done processing
+2024-11-23 13:10:46,585 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-23 13:10:48,299 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-23 13:10:48,383 [DEBUG] TBB already found in load path
+2024-11-23 13:10:48,399 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-23 13:10:48,401 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\or32n8v0.json
+2024-11-23 13:10:48,402 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\utdcyv10.json
+2024-11-23 13:10:48,402 [DEBUG] idx 0
+2024-11-23 13:10:48,402 [DEBUG] running CmdStan, num_threads: None
+2024-11-23 13:10:48,402 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=87080', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\or32n8v0.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\utdcyv10.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\prophet_modelf1da1d5x\\prophet_model-20241123131048.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-23 13:10:48,402 [INFO] Chain [1] start processing
+2024-11-23 13:10:48,444 [INFO] Chain [1] done processing
+2024-11-23 13:13:09,446 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-23 13:13:09,541 [DEBUG] TBB already found in load path
+2024-11-23 13:13:09,545 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-23 13:13:09,545 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\39zrecd_.json
+2024-11-23 13:13:09,545 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\0pe0if84.json
+2024-11-23 13:13:09,545 [DEBUG] idx 0
+2024-11-23 13:13:09,545 [DEBUG] running CmdStan, num_threads: None
+2024-11-23 13:13:09,545 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=65172', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\39zrecd_.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\0pe0if84.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\prophet_modelvcwggg9g\\prophet_model-20241123131309.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-23 13:13:09,545 [INFO] Chain [1] start processing
+2024-11-23 13:13:09,602 [INFO] Chain [1] done processing
+2024-11-23 13:13:19,709 [INFO] Retrieved 934 transactions for ticker 'META' in period '6m'
+2024-11-23 13:13:28,378 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-23 13:13:28,462 [DEBUG] TBB already found in load path
+2024-11-23 13:13:28,473 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-23 13:13:28,475 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\w37izluq.json
+2024-11-23 13:13:28,477 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\9s0t6bg1.json
+2024-11-23 13:13:28,478 [DEBUG] idx 0
+2024-11-23 13:13:28,478 [DEBUG] running CmdStan, num_threads: None
+2024-11-23 13:13:28,478 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=49647', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\w37izluq.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\9s0t6bg1.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\prophet_model09ozlfa6\\prophet_model-20241123131328.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-23 13:13:28,478 [INFO] Chain [1] start processing
+2024-11-23 13:13:28,521 [INFO] Chain [1] done processing
+2024-11-23 13:16:15,112 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-23 13:16:19,288 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-23 13:16:19,371 [DEBUG] TBB already found in load path
+2024-11-23 13:16:19,382 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-23 13:16:19,384 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\hdu7x4e_.json
+2024-11-23 13:16:19,385 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\rsoh22fs.json
+2024-11-23 13:16:19,386 [DEBUG] idx 0
+2024-11-23 13:16:19,387 [DEBUG] running CmdStan, num_threads: None
+2024-11-23 13:16:19,387 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=22400', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\hdu7x4e_.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\rsoh22fs.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\prophet_modelm0qp7emv\\prophet_model-20241123131619.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-23 13:16:19,387 [INFO] Chain [1] start processing
+2024-11-23 13:16:19,434 [INFO] Chain [1] done processing
+2024-11-23 13:18:19,857 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-23 13:18:22,624 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-23 13:18:22,706 [DEBUG] TBB already found in load path
+2024-11-23 13:18:22,717 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-23 13:18:22,719 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\9tvopjd9.json
+2024-11-23 13:18:22,720 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\f2f3ray7.json
+2024-11-23 13:18:22,721 [DEBUG] idx 0
+2024-11-23 13:18:22,722 [DEBUG] running CmdStan, num_threads: None
+2024-11-23 13:18:22,722 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=32416', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\9tvopjd9.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\f2f3ray7.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\prophet_model5ifloxlr\\prophet_model-20241123131822.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-23 13:18:22,722 [INFO] Chain [1] start processing
+2024-11-23 13:18:22,753 [INFO] Chain [1] done processing
+2024-11-23 13:30:35,891 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-23 13:31:49,394 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-23 13:31:51,774 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-23 13:31:53,746 [INFO] Retrieved 1 transactions for ticker 'AAPL' in period '1m'
+2024-11-23 13:32:00,961 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-23 13:32:24,394 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-23 13:32:24,485 [DEBUG] TBB already found in load path
+2024-11-23 13:32:24,496 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-23 13:32:24,498 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\g7gnigou.json
+2024-11-23 13:32:24,499 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\a4vplpd0.json
+2024-11-23 13:32:24,501 [DEBUG] idx 0
+2024-11-23 13:32:24,501 [DEBUG] running CmdStan, num_threads: None
+2024-11-23 13:32:24,501 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=64445', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\g7gnigou.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\a4vplpd0.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\prophet_modelzaiaqb14\\prophet_model-20241123133224.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-23 13:32:24,501 [INFO] Chain [1] start processing
+2024-11-23 13:32:24,714 [INFO] Chain [1] done processing
+2024-11-23 13:33:36,484 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-23 13:34:44,238 [INFO] Retrieved 3822 transactions for ticker 'META' in period '1y'
+2024-11-23 13:34:45,582 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-23 13:34:45,670 [DEBUG] TBB already found in load path
+2024-11-23 13:34:45,680 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-23 13:34:45,683 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\oyx47htw.json
+2024-11-23 13:34:45,684 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\df3ixa9g.json
+2024-11-23 13:34:45,686 [DEBUG] idx 0
+2024-11-23 13:34:45,686 [DEBUG] running CmdStan, num_threads: None
+2024-11-23 13:34:45,686 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=89860', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\oyx47htw.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\df3ixa9g.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\prophet_modeln1_1n_og\\prophet_model-20241123133445.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-23 13:34:45,686 [INFO] Chain [1] start processing
+2024-11-23 13:34:45,748 [INFO] Chain [1] done processing
+2024-11-23 14:35:41,027 [INFO] Retrieved 119 transactions for ticker 'AAPL' in period '1y'
+2024-11-23 14:35:53,547 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-23 14:35:53,651 [DEBUG] TBB already found in load path
+2024-11-23 14:35:53,659 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-23 14:35:53,659 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\l7617olr.json
+2024-11-23 14:35:53,659 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp90_llo0d\mhodtdwm.json
+2024-11-23 14:35:53,676 [DEBUG] idx 0
+2024-11-23 14:35:53,676 [DEBUG] running CmdStan, num_threads: None
+2024-11-23 14:35:53,676 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=43584', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\l7617olr.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\mhodtdwm.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp90_llo0d\\prophet_modelecl31xyw\\prophet_model-20241123143553.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-23 14:35:53,676 [INFO] Chain [1] start processing
+2024-11-23 14:35:53,722 [INFO] Chain [1] done processing
+2024-11-30 19:11:59,494 [INFO] Retrieved 3711 transactions for ticker 'META' in period '1y'
+2024-11-30 19:12:04,403 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-30 19:12:04,481 [DEBUG] Adding TBB (F:\SJSUSTUDY\SemesterStudies\272\pyenvs\cmpe272\Lib\site-packages\prophet\stan_model\cmdstan-2.33.1\stan\lib\stan_math\lib\tbb) to PATH
+2024-11-30 19:12:04,668 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-30 19:12:04,668 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp99c2_6bz\0aro8b0q.json
+2024-11-30 19:12:04,668 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp99c2_6bz\yamxy9x6.json
+2024-11-30 19:12:04,719 [DEBUG] idx 0
+2024-11-30 19:12:04,719 [DEBUG] running CmdStan, num_threads: None
+2024-11-30 19:12:04,719 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=70008', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp99c2_6bz\\0aro8b0q.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp99c2_6bz\\yamxy9x6.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp99c2_6bz\\prophet_model5kcejge_\\prophet_model-20241130191204.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-30 19:12:04,719 [INFO] Chain [1] start processing
+2024-11-30 19:12:05,222 [INFO] Chain [1] done processing
+2024-11-30 19:17:01,141 [INFO] Retrieved 118 transactions for ticker 'AAPL' in period '1y'
+2024-11-30 19:17:03,549 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-30 19:17:03,631 [DEBUG] TBB already found in load path
+2024-11-30 19:17:03,642 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-30 19:17:03,655 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp99c2_6bz\stz2xfkq.json
+2024-11-30 19:17:03,655 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp99c2_6bz\se0qz4qy.json
+2024-11-30 19:17:03,658 [DEBUG] idx 0
+2024-11-30 19:17:03,658 [DEBUG] running CmdStan, num_threads: None
+2024-11-30 19:17:03,659 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=73696', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp99c2_6bz\\stz2xfkq.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp99c2_6bz\\se0qz4qy.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp99c2_6bz\\prophet_modelyk98s5qg\\prophet_model-20241130191703.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-30 19:17:03,659 [INFO] Chain [1] start processing
+2024-11-30 19:17:03,724 [INFO] Chain [1] done processing
+2024-11-30 19:17:15,588 [INFO] Retrieved 53 transactions for ticker 'AAPL' in period '6m'
+2024-11-30 19:17:17,090 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-30 19:17:17,174 [DEBUG] TBB already found in load path
+2024-11-30 19:17:17,188 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-30 19:17:17,193 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp99c2_6bz\8ydc4ppz.json
+2024-11-30 19:17:17,194 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp99c2_6bz\hc7ger6u.json
+2024-11-30 19:17:17,196 [DEBUG] idx 0
+2024-11-30 19:17:17,196 [DEBUG] running CmdStan, num_threads: None
+2024-11-30 19:17:17,197 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=34031', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp99c2_6bz\\8ydc4ppz.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp99c2_6bz\\hc7ger6u.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp99c2_6bz\\prophet_modelcwlv3ljf\\prophet_model-20241130191717.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-30 19:17:17,197 [INFO] Chain [1] start processing
+2024-11-30 19:17:17,233 [INFO] Chain [1] done processing
+2024-11-30 19:17:20,432 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-30 19:17:20,517 [DEBUG] TBB already found in load path
+2024-11-30 19:17:20,533 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-30 19:17:20,533 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp99c2_6bz\f1ak677e.json
+2024-11-30 19:17:20,533 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp99c2_6bz\vxaoizeb.json
+2024-11-30 19:17:20,533 [DEBUG] idx 0
+2024-11-30 19:17:20,533 [DEBUG] running CmdStan, num_threads: None
+2024-11-30 19:17:20,533 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=55818', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp99c2_6bz\\f1ak677e.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp99c2_6bz\\vxaoizeb.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp99c2_6bz\\prophet_modelm6saqo3l\\prophet_model-20241130191720.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-30 19:17:20,533 [INFO] Chain [1] start processing
+2024-11-30 19:17:20,580 [INFO] Chain [1] done processing
+2024-11-30 19:17:28,717 [INFO] Retrieved 48 transactions for ticker 'AAPL' in period '3m'
+2024-11-30 19:17:30,196 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-30 19:17:30,267 [DEBUG] TBB already found in load path
+2024-11-30 19:17:30,284 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-30 19:17:30,284 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp99c2_6bz\6ckbgdn7.json
+2024-11-30 19:17:30,284 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp99c2_6bz\yerkarte.json
+2024-11-30 19:17:30,284 [DEBUG] idx 0
+2024-11-30 19:17:30,284 [DEBUG] running CmdStan, num_threads: None
+2024-11-30 19:17:30,284 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=41528', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp99c2_6bz\\6ckbgdn7.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp99c2_6bz\\yerkarte.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp99c2_6bz\\prophet_model6mya_n9k\\prophet_model-20241130191730.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-30 19:17:30,284 [INFO] Chain [1] start processing
+2024-11-30 19:17:30,349 [INFO] Chain [1] done processing
+2024-11-30 19:17:36,631 [INFO] Retrieved 50 transactions for ticker 'NVDA' in period '3m'
+2024-11-30 19:17:40,386 [INFO] Retrieved 644 transactions for ticker 'NVDA' in period '1y'
+2024-11-30 19:17:42,921 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-11-30 19:17:43,011 [DEBUG] TBB already found in load path
+2024-11-30 19:17:43,070 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-11-30 19:17:43,086 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp99c2_6bz\gfxq0k8u.json
+2024-11-30 19:17:43,086 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp99c2_6bz\5dwtycp1.json
+2024-11-30 19:17:43,086 [DEBUG] idx 0
+2024-11-30 19:17:43,086 [DEBUG] running CmdStan, num_threads: None
+2024-11-30 19:17:43,086 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=88658', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp99c2_6bz\\gfxq0k8u.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp99c2_6bz\\5dwtycp1.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp99c2_6bz\\prophet_model9peptqur\\prophet_model-20241130191743.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-11-30 19:17:43,086 [INFO] Chain [1] start processing
+2024-11-30 19:17:43,133 [INFO] Chain [1] done processing
+2024-12-01 00:26:16,000 [INFO] Retrieved 118 transactions for ticker 'AAPL' in period '1y'
+2024-12-01 00:26:28,453 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-12-01 00:26:28,532 [DEBUG] Adding TBB (F:\SJSUSTUDY\SemesterStudies\272\pyenvs\cmpe272\Lib\site-packages\prophet\stan_model\cmdstan-2.33.1\stan\lib\stan_math\lib\tbb) to PATH
+2024-12-01 00:26:28,547 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-12-01 00:26:28,547 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp061jz56b\g7itogfv.json
+2024-12-01 00:26:28,563 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp061jz56b\i_zkmc4x.json
+2024-12-01 00:26:28,563 [DEBUG] idx 0
+2024-12-01 00:26:28,563 [DEBUG] running CmdStan, num_threads: None
+2024-12-01 00:26:28,563 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=14292', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp061jz56b\\g7itogfv.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp061jz56b\\i_zkmc4x.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp061jz56b\\prophet_model5vg5dajq\\prophet_model-20241201002628.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-12-01 00:26:28,563 [INFO] Chain [1] start processing
+2024-12-01 00:26:28,782 [INFO] Chain [1] done processing
+2024-12-01 00:29:16,153 [INFO] Retrieved 3711 transactions for ticker 'META' in period '1y'
+2024-12-01 00:29:19,412 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-12-01 00:29:19,598 [DEBUG] TBB already found in load path
+2024-12-01 00:29:19,612 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-12-01 00:29:19,614 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp061jz56b\6e4xydd_.json
+2024-12-01 00:29:19,615 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp061jz56b\ci40_ros.json
+2024-12-01 00:29:19,616 [DEBUG] idx 0
+2024-12-01 00:29:19,616 [DEBUG] running CmdStan, num_threads: None
+2024-12-01 00:29:19,616 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=76007', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp061jz56b\\6e4xydd_.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp061jz56b\\ci40_ros.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp061jz56b\\prophet_modellyio8cyx\\prophet_model-20241201002919.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-12-01 00:29:19,617 [INFO] Chain [1] start processing
+2024-12-01 00:29:19,667 [INFO] Chain [1] done processing
+2024-12-01 00:30:38,698 [INFO] Retrieved 644 transactions for ticker 'NVDA' in period '1y'
+2024-12-01 00:30:41,151 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-12-01 00:30:41,237 [DEBUG] TBB already found in load path
+2024-12-01 00:30:41,248 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-12-01 00:30:41,250 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp061jz56b\ri6z1ktk.json
+2024-12-01 00:30:41,251 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmp061jz56b\u1d4yjdx.json
+2024-12-01 00:30:41,252 [DEBUG] idx 0
+2024-12-01 00:30:41,252 [DEBUG] running CmdStan, num_threads: None
+2024-12-01 00:30:41,253 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=21553', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp061jz56b\\ri6z1ktk.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp061jz56b\\u1d4yjdx.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmp061jz56b\\prophet_modelvhbibenq\\prophet_model-20241201003041.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-12-01 00:30:41,253 [INFO] Chain [1] start processing
+2024-12-01 00:30:41,308 [INFO] Chain [1] done processing
+2024-12-01 00:33:57,293 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-12-01 00:33:57,374 [DEBUG] Adding TBB (F:\SJSUSTUDY\SemesterStudies\272\pyenvs\cmpe272\Lib\site-packages\prophet\stan_model\cmdstan-2.33.1\stan\lib\stan_math\lib\tbb) to PATH
+2024-12-01 00:33:57,390 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-12-01 00:33:57,390 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpg87vvx76\qk63wfaq.json
+2024-12-01 00:33:57,390 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpg87vvx76\g0qm5bx4.json
+2024-12-01 00:33:57,405 [DEBUG] idx 0
+2024-12-01 00:33:57,405 [DEBUG] running CmdStan, num_threads: None
+2024-12-01 00:33:57,405 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=39520', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpg87vvx76\\qk63wfaq.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpg87vvx76\\g0qm5bx4.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpg87vvx76\\prophet_modeladmne9pm\\prophet_model-20241201003357.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-12-01 00:33:57,405 [INFO] Chain [1] start processing
+2024-12-01 00:33:57,439 [INFO] Chain [1] done processing
+2024-12-01 00:35:33,154 [INFO] Retrieved 118 transactions for ticker 'AAPL' in period '1y'
+2024-12-01 00:35:37,344 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-12-01 00:35:37,424 [DEBUG] Adding TBB (F:\SJSUSTUDY\SemesterStudies\272\pyenvs\cmpe272\Lib\site-packages\prophet\stan_model\cmdstan-2.33.1\stan\lib\stan_math\lib\tbb) to PATH
+2024-12-01 00:35:37,440 [INFO] n_changepoints greater than number of observations. Using 17.
+2024-12-01 00:35:37,440 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpiuhcvtek\p8w77gbf.json
+2024-12-01 00:35:37,440 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpiuhcvtek\d5hnwtz4.json
+2024-12-01 00:35:37,440 [DEBUG] idx 0
+2024-12-01 00:35:37,440 [DEBUG] running CmdStan, num_threads: None
+2024-12-01 00:35:37,440 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=72156', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpiuhcvtek\\p8w77gbf.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpiuhcvtek\\d5hnwtz4.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpiuhcvtek\\prophet_modelo42xo9mq\\prophet_model-20241201003537.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-12-01 00:35:37,440 [INFO] Chain [1] start processing
+2024-12-01 00:35:37,612 [INFO] Chain [1] done processing
+2024-12-01 00:36:44,605 [INFO] Retrieved 644 transactions for ticker 'NVDA' in period '1y'
+2024-12-01 00:36:48,062 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-12-01 00:36:48,144 [DEBUG] TBB already found in load path
+2024-12-01 00:36:48,156 [INFO] n_changepoints greater than number of observations. Using 17.
+2024-12-01 00:36:48,158 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpiuhcvtek\sipwyci2.json
+2024-12-01 00:36:48,159 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpiuhcvtek\sy2rrczk.json
+2024-12-01 00:36:48,161 [DEBUG] idx 0
+2024-12-01 00:36:48,161 [DEBUG] running CmdStan, num_threads: None
+2024-12-01 00:36:48,161 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=90064', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpiuhcvtek\\sipwyci2.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpiuhcvtek\\sy2rrczk.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpiuhcvtek\\prophet_modelmxfxpdy4\\prophet_model-20241201003648.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-12-01 00:36:48,161 [INFO] Chain [1] start processing
+2024-12-01 00:36:48,499 [INFO] Chain [1] done processing
+2024-12-01 00:38:34,116 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-12-01 00:38:34,199 [DEBUG] TBB already found in load path
+2024-12-01 00:38:34,214 [INFO] n_changepoints greater than number of observations. Using 17.
+2024-12-01 00:38:34,214 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpiuhcvtek\acdg5km4.json
+2024-12-01 00:38:34,214 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpiuhcvtek\wz_ki55g.json
+2024-12-01 00:38:34,214 [DEBUG] idx 0
+2024-12-01 00:38:34,214 [DEBUG] running CmdStan, num_threads: None
+2024-12-01 00:38:34,214 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=5282', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpiuhcvtek\\acdg5km4.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpiuhcvtek\\wz_ki55g.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpiuhcvtek\\prophet_modelg2an0akr\\prophet_model-20241201003834.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-12-01 00:38:34,214 [INFO] Chain [1] start processing
+2024-12-01 00:38:34,576 [INFO] Chain [1] done processing
+2024-12-01 00:43:08,599 [ERROR] An error occurred: 'volume'
+2024-12-01 00:44:31,616 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-12-01 00:44:31,694 [DEBUG] Adding TBB (F:\SJSUSTUDY\SemesterStudies\272\pyenvs\cmpe272\Lib\site-packages\prophet\stan_model\cmdstan-2.33.1\stan\lib\stan_math\lib\tbb) to PATH
+2024-12-01 00:44:31,823 [INFO] n_changepoints greater than number of observations. Using 17.
+2024-12-01 00:44:31,823 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpt6rydyju\_ubs0hg7.json
+2024-12-01 00:44:31,823 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpt6rydyju\nb5bstgl.json
+2024-12-01 00:44:31,823 [DEBUG] idx 0
+2024-12-01 00:44:31,823 [DEBUG] running CmdStan, num_threads: None
+2024-12-01 00:44:31,823 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=70306', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpt6rydyju\\_ubs0hg7.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpt6rydyju\\nb5bstgl.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpt6rydyju\\prophet_model4f31n2z5\\prophet_model-20241201004431.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-12-01 00:44:31,823 [INFO] Chain [1] start processing
+2024-12-01 00:44:45,363 [INFO] Chain [1] done processing
+2024-12-01 00:45:04,134 [INFO] Retrieved 50 transactions for ticker 'NVDA' in period '3m'
+2024-12-01 00:45:06,054 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-12-01 00:45:06,127 [DEBUG] TBB already found in load path
+2024-12-01 00:45:06,158 [INFO] n_changepoints greater than number of observations. Using 17.
+2024-12-01 00:45:06,158 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpt6rydyju\fk546agp.json
+2024-12-01 00:45:06,158 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpt6rydyju\4jzzo24u.json
+2024-12-01 00:45:06,158 [DEBUG] idx 0
+2024-12-01 00:45:06,158 [DEBUG] running CmdStan, num_threads: None
+2024-12-01 00:45:06,158 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=94572', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpt6rydyju\\fk546agp.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpt6rydyju\\4jzzo24u.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpt6rydyju\\prophet_modeldt1w1qyh\\prophet_model-20241201004506.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-12-01 00:45:06,158 [INFO] Chain [1] start processing
+2024-12-01 00:45:19,556 [INFO] Chain [1] done processing
+2024-12-01 00:48:28,497 [INFO] Retrieved 644 transactions for ticker 'NVDA' in period '1y'
+2024-12-01 00:48:31,377 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-12-01 00:48:31,463 [DEBUG] Adding TBB (F:\SJSUSTUDY\SemesterStudies\272\pyenvs\cmpe272\Lib\site-packages\prophet\stan_model\cmdstan-2.33.1\stan\lib\stan_math\lib\tbb) to PATH
+2024-12-01 00:48:31,517 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpfur23ba6\453pffvw.json
+2024-12-01 00:48:31,527 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpfur23ba6\_pkp108x.json
+2024-12-01 00:48:31,530 [DEBUG] idx 0
+2024-12-01 00:48:31,530 [DEBUG] running CmdStan, num_threads: None
+2024-12-01 00:48:31,530 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=58342', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpfur23ba6\\453pffvw.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpfur23ba6\\_pkp108x.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpfur23ba6\\prophet_modelp5eumz2j\\prophet_model-20241201004831.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-12-01 00:48:31,530 [INFO] Chain [1] start processing
+2024-12-01 00:48:34,392 [INFO] Chain [1] done processing
+2024-12-01 00:48:50,561 [INFO] Retrieved 118 transactions for ticker 'AAPL' in period '1y'
+2024-12-01 00:48:53,726 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-12-01 00:48:53,812 [DEBUG] TBB already found in load path
+2024-12-01 00:48:53,828 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpfur23ba6\hy2zhn1i.json
+2024-12-01 00:48:53,828 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpfur23ba6\lpxzmh_0.json
+2024-12-01 00:48:53,828 [DEBUG] idx 0
+2024-12-01 00:48:53,828 [DEBUG] running CmdStan, num_threads: None
+2024-12-01 00:48:53,828 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=4837', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpfur23ba6\\hy2zhn1i.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpfur23ba6\\lpxzmh_0.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpfur23ba6\\prophet_modeliv1pyuj2\\prophet_model-20241201004853.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-12-01 00:48:53,828 [INFO] Chain [1] start processing
+2024-12-01 00:48:55,867 [INFO] Chain [1] done processing
+2024-12-01 00:50:08,602 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-12-01 00:50:08,682 [DEBUG] Adding TBB (F:\SJSUSTUDY\SemesterStudies\272\pyenvs\cmpe272\Lib\site-packages\prophet\stan_model\cmdstan-2.33.1\stan\lib\stan_math\lib\tbb) to PATH
+2024-12-01 00:50:08,713 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpz6mg6nw1\43shhf7u.json
+2024-12-01 00:50:08,713 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpz6mg6nw1\y0wp9lwc.json
+2024-12-01 00:50:08,713 [DEBUG] idx 0
+2024-12-01 00:50:08,713 [DEBUG] running CmdStan, num_threads: None
+2024-12-01 00:50:08,713 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=35314', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpz6mg6nw1\\43shhf7u.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpz6mg6nw1\\y0wp9lwc.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpz6mg6nw1\\prophet_model7xwwdrh3\\prophet_model-20241201005008.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-12-01 00:50:08,713 [INFO] Chain [1] start processing
+2024-12-01 00:50:10,050 [INFO] Chain [1] done processing
+2024-12-01 00:50:31,683 [INFO] Retrieved 644 transactions for ticker 'NVDA' in period '1y'
+2024-12-01 00:50:33,755 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-12-01 00:50:33,841 [DEBUG] TBB already found in load path
+2024-12-01 00:50:33,864 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpz6mg6nw1\786edu31.json
+2024-12-01 00:50:33,867 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpz6mg6nw1\o4o6sl18.json
+2024-12-01 00:50:33,868 [DEBUG] idx 0
+2024-12-01 00:50:33,868 [DEBUG] running CmdStan, num_threads: None
+2024-12-01 00:50:33,868 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=81014', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpz6mg6nw1\\786edu31.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpz6mg6nw1\\o4o6sl18.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpz6mg6nw1\\prophet_modeljkeomt7i\\prophet_model-20241201005033.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-12-01 00:50:33,868 [INFO] Chain [1] start processing
+2024-12-01 00:50:34,465 [INFO] Chain [1] done processing
+2024-12-01 09:52:17,985 [INFO] Retrieved 3711 transactions for ticker 'META' in period '1y'
+2024-12-01 09:52:21,390 [DEBUG] cmd: where.exe tbb.dll
+cwd: None
+2024-12-01 09:52:21,477 [DEBUG] TBB already found in load path
+2024-12-01 09:52:21,498 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpz6mg6nw1\mi08jd2v.json
+2024-12-01 09:52:21,500 [DEBUG] input tempfile: C:\Users\prati\AppData\Local\Temp\tmpz6mg6nw1\h3o7iysv.json
+2024-12-01 09:52:21,502 [DEBUG] idx 0
+2024-12-01 09:52:21,502 [DEBUG] running CmdStan, num_threads: None
+2024-12-01 09:52:21,502 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=91704', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpz6mg6nw1\\mi08jd2v.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpz6mg6nw1\\h3o7iysv.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpz6mg6nw1\\prophet_modelhr3v1rrb\\prophet_model-20241201095221.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-12-01 09:52:21,503 [INFO] Chain [1] start processing
+2024-12-01 09:52:23,090 [INFO] Chain [1] done processing
