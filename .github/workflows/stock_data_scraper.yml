@@ -39,4 +39,5 @@ jobs:
 
       # Step to run the Python script
       - name: Run Stock Script
-        run: python backend/script/stock.py
+        run: python backend/script/stock_finance_data_extracton_script.py
+
