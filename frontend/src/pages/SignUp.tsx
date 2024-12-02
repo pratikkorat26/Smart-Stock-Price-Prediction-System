@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import BackgroundImage from '../assests/Images/login_background.jpg';
 import Header from '../components/Header';
 import SignUpForm from '../components/signup/SignUpForm';
+import API_ENDPOINTS from '../utils/apiEndpoints';
 
 const SignUp: React.FC = () => {
   const [signUpError, setSignUpError] = useState('');
@@ -27,7 +28,7 @@ const SignUp: React.FC = () => {
 
     if (!nameError && !emailError && !passwordError && !confirmPasswordError) {
       try {
-        const response = await fetch('http://127.0.0.1:8000/auth/signup', {
+        const response = await fetch(API_ENDPOINTS.signUp, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
