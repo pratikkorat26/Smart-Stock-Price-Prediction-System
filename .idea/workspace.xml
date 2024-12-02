@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="190c17de-3131-4481-a2cf-9176822ce2dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ForecastChartContainer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/utils/Pratik.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/forecast.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/forecast.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routers/auth_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routers/auth_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/routers/forecast_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routers/forecast_router.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/transaction_service.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/transaction_service.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/About.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Dashboard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,10 +53,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "F:/SJSUSTUDY/SemesterStudies/272/CMPE272GenAIProject/frontend/src/utils",
+    "last_opened_file_path": "F:/SJSUSTUDY/SemesterStudies/272/CMPE272GenAIProject/frontend/src/assests/Images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -70,6 +70,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\SJSUSTUDY\SemesterStudies\272\CMPE272GenAIProject\frontend\src\assests\Images" />
       <recent name="F:\SJSUSTUDY\SemesterStudies\272\CMPE272GenAIProject\frontend\src\utils" />
     </key>
   </component>
@@ -90,11 +91,17 @@
       <option name="presentableId" value="Default" />
       <updated>1732335761349</updated>
       <workItem from="1732335761941" duration="17034000" />
-      <workItem from="1732387358600" duration="10856000" />
+      <workItem from="1732387358600" duration="14049000" />
+      <workItem from="1732436310597" duration="139000" />
+      <workItem from="1732649219145" duration="61000" />
+      <workItem from="1733022293358" duration="17865000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.config" />
   </component>
 </project>

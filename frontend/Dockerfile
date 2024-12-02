@@ -1,26 +1,17 @@
-# Use a lightweight Node.js image
-FROM node:16-alpine
+# Use the official Nginx image as the base image
+FROM nginx:alpine
 
 # Set working directory
-WORKDIR /app
+WORKDIR /usr/share/nginx/html
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
+# Remove default Nginx static files
+RUN rm -rf ./*
 
-# Install dependencies
-RUN npm install
+# Copy React build files to the Nginx web root
+COPY build/ .
 
-# Copy the rest of the application
-COPY . .
+# Expose port 80 for the server
+EXPOSE 80
 
-# Build the React app
-RUN npm run build
-
-# Serve the app using a lightweight server
-RUN npm install -g serve
-
-# Expose port 8080 (Elastic Beanstalk default)
-EXPOSE 8080
-
-# Start the server and specify the port as 8080
-CMD ["serve", "-s", "build", "-l", "8080"]
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]

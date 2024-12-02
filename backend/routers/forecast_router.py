@@ -9,6 +9,7 @@ from starlette import status
 from datetime import datetime, timedelta
 from services.auth_services import decode_access_token
 import logging
+from models.forecast import ForecastInput, ForecastOutput
 
 # FastAPI Router Setup
 forecast_router = APIRouter()
@@ -34,16 +35,16 @@ def compute_rsi(series: pd.Series, window: int) -> pd.Series:
     rs = roll_up / roll_down
     return 100 - (100 / (1 + rs))
 
-def prepare_training_data(data: List[dict]) -> pd.DataFrame:
+def prepare_training_data(data: List[ForecastInput]) -> pd.DataFrame:
     """Prepare and clean training data for Prophet."""
     # Convert input data to DataFrame
     df = pd.DataFrame([
         {
-            "ds": datetime.strptime(item['date'], "%b %d, %Y"),
-            "y": item['open'],
-            "high": item['high'],
-            "low": item['low'],
-            "close": item['close']
+            "ds": datetime.strptime(item.date, "%Y-%m-%d"),
+            "y": item.open,
+            "high": item.high,
+            "low": item.low,
+            "close": item.close
         }
         for item in data
     ])
@@ -81,9 +82,9 @@ def calculate_dynamic_capacity(df: pd.DataFrame) -> float:
 
     return latest_price * volatility_factor * trend_factor * 2.5
 
-@forecast_router.post("/future", response_model=List[dict])
+@forecast_router.post("/future", response_model=List[ForecastOutput])
 async def generate_forecast(
-        data: List[dict],
+        data: List[ForecastInput],
         user: dict = Depends(get_current_user),
 ):
     """Generate a 30-day forecast using enhanced Prophet model without seasonality."""
@@ -142,20 +143,20 @@ async def generate_forecast(
 
         # Format output
         output = [
-            {
-                "date": row["ds"].strftime("%d %b, %Y"),
-                "open": float(row["yhat"]),
-                "high": float(row["yhat_upper"]),
-                "low": float(row["yhat_lower"]),
-                "close": None,
-                "trend": float(row["trend"]),
-                "trend_lower": float(row["trend_lower"]),
-                "trend_upper": float(row["trend_upper"]),
-                "yhat_lower": float(row["yhat_lower"]),
-                "yhat_upper": float(row["yhat_upper"]),
-                "momentum": float(row["momentum"]),
-                "acceleration": float(row["acceleration"]),
-            }
+            ForecastOutput(
+                date=row["ds"].strftime("%Y-%m-%d"),
+                open=float(row["yhat"]),
+                high=float(row["yhat_upper"]),
+                low=float(row["yhat_lower"]),
+                close=None,
+                trend=float(row["trend"]),
+                trend_lower=float(row["trend_lower"]),
+                trend_upper=float(row["trend_upper"]),
+                yhat_lower=float(row["yhat_lower"]),
+                yhat_upper=float(row["yhat_upper"]),
+                momentum=float(row["momentum"]),
+                acceleration=float(row["acceleration"]),
+            )
             for _, row in result.iterrows()
         ]
 
