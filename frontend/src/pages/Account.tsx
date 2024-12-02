@@ -151,7 +151,7 @@ const Account: React.FC = () => {
           updateData.password = password;
         }
 
-        const response = await fetch('http://127.0.0.1:8000/auth/me/update', {
+        const response = await fetch(API_ENDPOINTS.updateUserProfile, {
           method: 'PUT',
           headers: {
             Authorization: `Bearer ${token}`,
