@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:8000"; // Replace with your actual backend URL
+const BASE_URL = "http://localhost:8000"; 
 
 const API_ENDPOINTS = {
   // Dashboard
@@ -10,12 +10,16 @@ const API_ENDPOINTS = {
   // Account
   getUserDetails: `${BASE_URL}/auth/me`,
   updateUserProfile: `${BASE_URL}/auth/me/update`,
+  
 
   // Features
   fetchFeatureData: `${BASE_URL}/features`,
 
+  // Future
+  fetchFutureData: `${BASE_URL}/future`,
+
   // Authentication
-  login: `${BASE_URL}/auth/login`,
+  login: `${BASE_URL}/auth/token`,
   signUp: `${BASE_URL}/auth/signup`,
 
   // Other  APIs
