@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Box, Paper, Typography, Fade } from '@mui/material';
 import { Helmet } from 'react-helmet';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, Navigate } from 'react-router-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import {jwtDecode} from 'jwt-decode';
 import BackgroundImage from '../assests/Images/login_background.jpg';
@@ -10,20 +10,23 @@ import LoginHeader from '../components/Header';
 import WelcomePanel from '../components/login/WelcomePanel';
 import LoginForm from '../components/login/LoginForm';
 import GoogleLoginButton from '../components/login/GoogleLoginButton';
+import API_ENDPOINTS from '../utils/apiEndpoints';
 
 const CLIENT_ID = '978139760528-bmaaljd4da3akanum226u4627h4iq98e.apps.googleusercontent.com';
+
+
 
 const Login: React.FC = () => {
   const [loginError, setLoginError] = useState('');
   const navigate = useNavigate();
-
+  const token = localStorage.getItem('authToken');
   const handleFormSubmit = async (email: string, password: string) => {
     try {
       const formData = new URLSearchParams();
       formData.append('username', email);
       formData.append('password', password);
 
-      const response = await fetch('http://localhost:8000/auth/token', {
+      const response = await fetch(API_ENDPOINTS.login, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -68,14 +71,14 @@ const Login: React.FC = () => {
     formData.append('token', token);
 
     // Send login request to the backend
-    const tokenResponse = await fetch('http://localhost:8000/auth/token', {
+    const tokenResponse = await fetch(API_ENDPOINTS.login, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
       body: formData.toString(),
     });
-
+console.log('Token Response:', tokenResponse);
     if (tokenResponse.ok) {
       const data = await tokenResponse.json();
       localStorage.setItem('authToken', data.access_token);
@@ -94,7 +97,9 @@ const Login: React.FC = () => {
   const handleGoogleFailure = () => {
     setLoginError('Google Login failed.');
   };
-
+if (token) {
+  return <Navigate to="/dashboard" replace />;
+}
   return (
     <Box
       sx={{
