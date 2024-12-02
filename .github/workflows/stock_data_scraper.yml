@@ -1,43 +1,38 @@
 name: Run Stock Script
 
-# Controls when the action will run. Workflow runs when manually triggered using the UI
-# or API.
+# Workflow trigger
 on:
   workflow_dispatch:
-    # Inputs the workflow accepts.
     inputs:
-      name:
-        description: 'Trigger for running the stock script'
-        default: 'User'
+      trigger_by:
+        description: 'Reason or trigger for running the stock script'
+        default: 'Manual Run'
         required: true
         type: string
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "run-stock-script"
   run-stock-script:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Step to checkout the repository
+      # Step 1: Check out the repository
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Step to set up Python
+      # Step 2: Set up Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: 3.x
 
-      # Step to install dependencies
+      # Step 3: Install dependencies
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install yfinance pymongo python-dateutil
 
-      # Step to run the Python script
+      # Step 4: Run the Python script with environment variables
       - name: Run Stock Script
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }} # Secure MongoDB URI
         run: python backend/scripts/stock_finance_data_extracton_script.py
-
