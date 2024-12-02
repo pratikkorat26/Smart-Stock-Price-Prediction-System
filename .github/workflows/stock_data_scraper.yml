@@ -1,0 +1,42 @@
+name: Run Stock Script
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+      name:
+        description: 'Trigger for running the stock script'
+        default: 'User'
+        required: true
+        type: string
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "run-stock-script"
+  run-stock-script:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Step to checkout the repository
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step to set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+
+      # Step to install dependencies
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install yfinance pymongo python-dateutil
+
+      # Step to run the Python script
+      - name: Run Stock Script
+        run: python ./backend/script/stock.py
