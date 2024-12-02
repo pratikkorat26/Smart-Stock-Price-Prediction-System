@@ -6,14 +6,16 @@ import pandas as pd
 import numpy as np
 from prophet import Prophet
 from starlette import status
-from datetime import datetime, timedelta
+from datetime import timedelta
 from services.auth_services import decode_access_token
 import logging
 from models.forecast import ForecastInput, ForecastOutput
+from dateutil.parser import parse  # Use flexible date parser
 
 # FastAPI Router Setup
 forecast_router = APIRouter()
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token")
+
 
 def get_current_user(token: str = Depends(oauth2_scheme)):
     user = decode_access_token(token)
@@ -25,6 +27,7 @@ def get_current_user(token: str = Depends(oauth2_scheme)):
         )
     return user
 
+
 def compute_rsi(series: pd.Series, window: int) -> pd.Series:
     """Compute Relative Strength Index (RSI)."""
     delta = series.diff()
@@ -35,12 +38,13 @@ def compute_rsi(series: pd.Series, window: int) -> pd.Series:
     rs = roll_up / roll_down
     return 100 - (100 / (1 + rs))
 
+
 def prepare_training_data(data: List[ForecastInput]) -> pd.DataFrame:
     """Prepare and clean training data for Prophet."""
     # Convert input data to DataFrame
     df = pd.DataFrame([
         {
-            "ds": datetime.strptime(item.date, "%Y-%m-%d"),
+            "ds": parse(item.date),  # Use flexible date parser
             "y": item.open,
             "high": item.high,
             "low": item.low,
@@ -70,6 +74,7 @@ def prepare_training_data(data: List[ForecastInput]) -> pd.DataFrame:
 
     return df
 
+
 def calculate_dynamic_capacity(df: pd.DataFrame) -> float:
     """Calculate dynamic capacity based on historical volatility and trend."""
     latest_price = df['y'].iloc[-1]
@@ -81,6 +86,7 @@ def calculate_dynamic_capacity(df: pd.DataFrame) -> float:
     trend_factor = 1 + max(0, trend / latest_price)
 
     return latest_price * volatility_factor * trend_factor * 2.5
+
 
 @forecast_router.post("/future", response_model=List[ForecastOutput])
 async def generate_forecast(
