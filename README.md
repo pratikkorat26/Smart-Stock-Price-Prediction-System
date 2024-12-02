@@ -13,9 +13,8 @@ This project investigates the relationship between insider trading activity and 
 4. Nagaraj Gireppa Kanni
 
 ## Microservice Architecture Diagram:
-![Architecture-Diagram](https://github.com/user-attachments/assets/9f898961-ebec-49cd-8453-320a7937e5e3)
+![Architecture_Diagram](https://github.com/user-attachments/assets/4e6a256d-462b-4e9f-b740-024510630635)
 
-> This is just an initial thought on how we are going to implement this project. We will refine our architecture diagram as the project progresses.
 ## User Persona Summary Document
 [View User Persona Summary](https://docs.google.com/document/d/1M36ZfJ77DTIMX9P-NQI2_S8Kb-T7aSXh_dai-61QxJ4/edit)
 
