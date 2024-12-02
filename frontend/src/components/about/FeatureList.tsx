@@ -63,7 +63,7 @@ const FeatureList: React.FC = () => {
     <Box
       sx={{
         p: 4,
-        background: 'linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(17, 24, 39, 0.9))',
+        background: 'linear-gradient(135deg, rgba(115, 194, 160, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%)',
         borderRadius: '16px',
         mb: 4,
         textAlign: 'center',
@@ -135,7 +135,7 @@ const FeatureList: React.FC = () => {
       sx={{
         py: 10,
         px: { xs: 2, md: 6 },
-        background: 'linear-gradient(to bottom right, #1E293B, #0F172A)',
+        background: 'linear-gradient(135deg, rgba(115, 194, 160, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%)',
         color: 'white',
       }}
     >
