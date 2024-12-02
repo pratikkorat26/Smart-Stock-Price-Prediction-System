@@ -132,10 +132,9 @@ const Dashboard: React.FC<DashboardProps> = () => {
 
     setIsPredicting(true); // Start loading
     try {
-      const forecastUrl = "http://localhost:8000/future";
       const token = localStorage.getItem('authToken'); // Retrieve the token from local storage
 
-      const forecastResponse = await fetch(forecastUrl, {
+      const forecastResponse = await fetch(API_ENDPOINTS.fetchFutureData, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
