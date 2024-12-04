@@ -353,7 +353,8 @@ const Dashboard: React.FC<DashboardProps> = () => {
                   },
                 }}
               >
-                {isPredicting ? 'Predicting...' : 'Predict'}
+
+                {isPredicting ? 'Predicting...' : 'Predict Future Trends'}
               </Button>
             </Box>
 
