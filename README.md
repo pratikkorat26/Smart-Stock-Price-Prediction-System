@@ -21,9 +21,11 @@ This project investigates the relationship between insider trading activity and 
 ## Product Backlog
 [View Product Backlog ](https://docs.google.com/spreadsheets/d/1-6SNRWafSqVvoitA6lYNFqx0OGWtVJPsw2Rxw7qgCcU/edit?usp=sharing) 
 
+## Project Sprint Task Board
+[https://docs.google.com/spreadsheets/d/1uJr3OGZMIMjZN1VK0RzqEzCFX1NDH_OOJ3BB7nGJSpk/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1uJr3OGZMIMjZN1VK0RzqEzCFX1NDH_OOJ3BB7nGJSpk/edit?usp=sharing)
+
 ## Project Technologies Stack:
 * Backend -> Python, FastAPI
 * Database -> MongoDB
 * Frontend -> Streamlit / Kiwi
 * Deployment -> AWS/GCP
-# SnoopTrade
