@@ -27,5 +27,5 @@ This project investigates the relationship between insider trading activity and 
 ## Project Technologies Stack:
 * Backend -> Python, FastAPI
 * Database -> MongoDB
-* Frontend -> Streamlit / Kiwi
+* Frontend -> React, Material UI
 * Deployment -> AWS/GCP
