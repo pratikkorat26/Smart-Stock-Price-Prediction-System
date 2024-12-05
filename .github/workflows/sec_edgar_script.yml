@@ -1,0 +1,41 @@
+name: Run Form 4 Scraper Script
+
+# Workflow trigger
+on:
+  workflow_dispatch:
+    inputs:
+      trigger_by:
+        description: 'Reason or trigger for running the Form 4 Scraper script'
+        default: 'Manual Run'
+        required: true
+        type: string
+
+jobs:
+  run-form4-script:
+    runs-on: ubuntu-latest
+
+    environment: Dev  # Use the environment where MONGODB_URI is stored
+
+    steps:
+      # Step 1: Check out the repository
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+
+      # Step 3: Install dependencies
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pandas beautifulsoup4 lxml pymongo
+
+      # Step 4: Run the Python script with environment variable
+      - name: Run Form 4 Scraper Script
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}  # Reference the MongoDB URI secret
+        run: python backend/scripts/sec_filing_data_extraction_script.py
+
