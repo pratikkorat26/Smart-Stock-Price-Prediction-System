@@ -13,6 +13,15 @@ More infomation for the project is mentiond in Class project-insider trades.docx
 3. Nagaraj Gireppa Kanni
 
 ---
+
+## Project Technologies Stack:
+* Backend -> Python, FastAPI
+* Database -> MongoDB
+* Frontend -> React, Material UI
+* Deployment -> AWS/GCP
+
+
+---
 ## Backend API Documentation
 
 This document provides a brief overview of the backend API endpoints.
@@ -89,9 +98,3 @@ This frontend provides a user-friendly interface for visualizing insider trading
 
 ## Project Sprint Task Board
 [https://docs.google.com/spreadsheets/d/1uJr3OGZMIMjZN1VK0RzqEzCFX1NDH_OOJ3BB7nGJSpk/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1uJr3OGZMIMjZN1VK0RzqEzCFX1NDH_OOJ3BB7nGJSpk/edit?usp=sharing)
-
-## Project Technologies Stack:
-* Backend -> Python, FastAPI
-* Database -> MongoDB
-* Frontend -> React, Material UI
-* Deployment -> AWS/GCP
