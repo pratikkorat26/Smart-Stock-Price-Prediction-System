@@ -84,7 +84,7 @@ This frontend provides a user-friendly interface for visualizing insider trading
 
 ### Link to the website
 
-[http://cmpe272frontend.us-west-2.elasticbeanstalk.com/dashboard](http://cmpe272frontend.us-west-2.elasticbeanstalk.com/dashboard)
+[http://cmpe272frontend.us-west-2.elasticbeanstalk.com/dashboard](http://cmpe272frontend.us-west-2.elasticbeanstalk.com)
 
 ---
 ## Architecture and Deployment Diagram:
