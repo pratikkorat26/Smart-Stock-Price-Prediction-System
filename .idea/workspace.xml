@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="190c17de-3131-4481-a2cf-9176822ce2dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/nginx.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/scripts/sec_filing_data_extraction_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/scripts/sec_filing_data_extraction_script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/scripts/stock_finance_data_extracton_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/scripts/stock_finance_data_extracton_script.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +126,8 @@
       <workItem from="1733022293358" duration="17865000" />
       <workItem from="1733115478689" duration="5383000" />
       <workItem from="1733164894624" duration="6557000" />
-      <workItem from="1733279662917" duration="9118000" />
+      <workItem from="1733279662917" duration="16908000" />
+      <workItem from="1733438744741" duration="1008000" />
     </task>
     <servers />
   </component>
@@ -149,6 +149,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CMPE272GenAIProject$sec_filing_data_extraction_script.coverage" NAME="sec_filing_data_extraction_script Coverage Results" MODIFIED="1733358862776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/scripts" />
+    <SUITE FILE_PATH="coverage/CMPE272GenAIProject$sec_filing_data_extraction_script.coverage" NAME="sec_filing_data_extraction_script Coverage Results" MODIFIED="1733380842779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/scripts" />
   </component>
 </project>

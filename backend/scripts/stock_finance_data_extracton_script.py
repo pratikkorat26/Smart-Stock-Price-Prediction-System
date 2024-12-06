@@ -123,7 +123,7 @@ def save_stock_data(ticker: str, max_entries: int = 500):
 # Main entry point
 if __name__ == "__main__":
     # Define your list of tickers
-    ticker_symbols = ["AAPL", "NVDA", "META"]
+    ticker_symbols = ["META"]
 
     # Loop through each ticker in the list and save data
     for ticker_symbol in ticker_symbols:
