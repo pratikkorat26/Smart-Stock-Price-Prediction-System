@@ -8,6 +8,7 @@ import SignUpForm from '../components/signup/SignUpForm';
 import API_ENDPOINTS from '../utils/apiEndpoints';
 
 const SignUp: React.FC = () => {
+  const [errors, setErrors] = useState<{ name?: string; email?: string; password?: string; confirmPassword?: string }>({});
   const [signUpError, setSignUpError] = useState('');
   const [successMessage, setSuccessMessage] = useState(false);
   const navigate = useNavigate();
@@ -26,6 +27,16 @@ const SignUp: React.FC = () => {
     const passwordError = validatePassword(password);
     const confirmPasswordError = validateConfirmPassword(password, confirmPassword);
 
+    const fieldErrors = {
+      name: nameError,
+      email: emailError,
+      password: passwordError,
+      confirmPassword: confirmPasswordError,
+    };
+
+    setErrors(fieldErrors);
+
+    // If no validation errors, proceed to sign up
     if (!nameError && !emailError && !passwordError && !confirmPasswordError) {
       try {
         const response = await fetch(API_ENDPOINTS.signUp, {
@@ -73,7 +84,7 @@ const SignUp: React.FC = () => {
           <title>Sign Up | SnoopTrade</title>
         </Helmet>
 
-        <SignUpForm onSubmit={handleSubmit} error={signUpError} />
+        <SignUpForm onSubmit={handleSubmit} error={signUpError} errors={errors} />
 
         <Snackbar
           open={successMessage}

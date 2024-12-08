@@ -12,19 +12,27 @@ import { Visibility, VisibilityOff } from '@mui/icons-material';
 interface SignUpFormProps {
   onSubmit: (name: string, email: string, password: string, confirmPassword: string) => void;
   error: string;
+  errors: { name?: string; email?: string; password?: string; confirmPassword?: string };
 }
 
-const SignUpForm: React.FC<SignUpFormProps> = ({ onSubmit, error }) => {
+const SignUpForm: React.FC<SignUpFormProps> = ({ onSubmit, error, errors }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [nameValidationTriggered, setNameValidationTriggered] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSubmit(name, email, password, confirmPassword);
+  };
+
+  // Function to check if the name contains both first and last names
+  const isFullNameValid = (name: string) => {
+    const parts = name.trim().split(' ');
+    return parts.length >= 2 && parts.every((part) => part.length > 0);
   };
 
   return (
@@ -50,6 +58,12 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ onSubmit, error }) => {
           fullWidth
           value={name}
           onChange={(e) => setName(e.target.value)}
+          onFocus={() => setNameValidationTriggered(true)}
+          error={!!errors.name || (nameValidationTriggered && !isFullNameValid(name))}
+          helperText={
+            errors.name ||
+            (nameValidationTriggered && !isFullNameValid(name) && 'Please enter both first and last names.')
+          }
         />
         <TextField
           label="Email"
@@ -59,6 +73,8 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ onSubmit, error }) => {
           fullWidth
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          error={!!errors.email}
+          helperText={errors.email}
         />
         <TextField
           label="Password"
@@ -68,6 +84,8 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ onSubmit, error }) => {
           fullWidth
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          error={!!errors.password}
+          helperText={errors.password}
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
@@ -89,6 +107,8 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ onSubmit, error }) => {
           fullWidth
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
+          error={!!errors.confirmPassword}
+          helperText={errors.confirmPassword}
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
