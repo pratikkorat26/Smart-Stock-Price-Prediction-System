@@ -24,15 +24,23 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ onSubmit, error, errors }) => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [nameValidationTriggered, setNameValidationTriggered] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    onSubmit(name, email, password, confirmPassword);
-  };
-
   // Function to check if the name contains both first and last names
   const isFullNameValid = (name: string) => {
     const parts = name.trim().split(' ');
     return parts.length >= 2 && parts.every((part) => part.length > 0);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Trigger validation on name field before allowing sign up
+    setNameValidationTriggered(true);
+
+    if (!isFullNameValid(name)) {
+      return; // Do not proceed if the name is invalid
+    }
+
+    onSubmit(name, email, password, confirmPassword);
   };
 
   return (
