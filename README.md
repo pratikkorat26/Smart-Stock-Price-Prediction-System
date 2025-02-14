@@ -20,6 +20,10 @@ More infomation for the project is mentiond in Class project-insider trades.docx
 * Frontend -> React, Material UI
 * Deployment -> AWS/GCP
 
+---
+## Architecture and Deployment Diagram:
+![Architecture_Diagram](https://github.com/user-attachments/assets/4e6a256d-462b-4e9f-b740-024510630635)
+
 
 ---
 ## Backend API Documentation
@@ -87,8 +91,6 @@ This frontend provides a user-friendly interface for visualizing insider trading
 [http://cmpe272frontend.us-west-2.elasticbeanstalk.com/dashboard](http://cmpe272frontend.us-west-2.elasticbeanstalk.com)
 
 ---
-## Architecture and Deployment Diagram:
-![Architecture_Diagram](https://github.com/user-attachments/assets/4e6a256d-462b-4e9f-b740-024510630635)
 
 ## User Persona Summary Document
 [View User Persona Summary](https://docs.google.com/document/d/1M36ZfJ77DTIMX9P-NQI2_S8Kb-T7aSXh_dai-61QxJ4/edit)
