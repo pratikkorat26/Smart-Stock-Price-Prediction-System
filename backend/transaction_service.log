@@ -1364,3 +1364,59 @@ cwd: None
 2024-12-01 09:52:21,502 [DEBUG] CmdStan args: ['F:\\SJSUSTUDY\\SemesterStudies\\272\\pyenvs\\cmpe272\\Lib\\site-packages\\prophet\\stan_model\\prophet_model.bin', 'random', 'seed=91704', 'data', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpz6mg6nw1\\mi08jd2v.json', 'init=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpz6mg6nw1\\h3o7iysv.json', 'output', 'file=C:\\Users\\prati\\AppData\\Local\\Temp\\tmpz6mg6nw1\\prophet_modelhr3v1rrb\\prophet_model-20241201095221.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
 2024-12-01 09:52:21,503 [INFO] Chain [1] start processing
 2024-12-01 09:52:23,090 [INFO] Chain [1] done processing
+2024-12-02 11:52:13,468 [ERROR] Importing plotly failed. Interactive plots will not work.
+2024-12-02 11:53:33,049 [INFO] Retrieved 3812 transactions for ticker 'META' in period '1y'
+2024-12-02 11:53:35,348 [ERROR] ValueError: time data 'Dec 4, 2023' does not match format '%Y-%m-%d'
+2024-12-02 11:53:37,502 [ERROR] ValueError: time data 'Dec 4, 2023' does not match format '%Y-%m-%d'
+2024-12-02 11:53:38,323 [ERROR] ValueError: time data 'Dec 4, 2023' does not match format '%Y-%m-%d'
+2024-12-02 11:53:39,082 [ERROR] ValueError: time data 'Dec 4, 2023' does not match format '%Y-%m-%d'
+2024-12-02 11:54:14,078 [INFO] Retrieved 122 transactions for ticker 'AAPL' in period '1y'
+2024-12-02 11:54:17,419 [ERROR] ValueError: time data 'Dec 4, 2023' does not match format '%Y-%m-%d'
+2024-12-02 11:55:12,378 [WARNING] (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/nevilsmac/Downloads/CMPE 272/cmpe272env/cmpe272/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-12-02 11:55:26,574 [ERROR] ValueError: time data 'string' does not match format '%Y-%m-%d'
+2024-12-02 11:57:18,634 [INFO] n_changepoints greater than number of observations. Using 3.
+2024-12-02 11:57:18,637 [DEBUG] input tempfile: /var/folders/5n/rd1jhl_j5xg0f55gc8zdlfxr0000gn/T/tmp4eeiyt2k/xdwxrlzb.json
+2024-12-02 11:57:18,637 [DEBUG] input tempfile: /var/folders/5n/rd1jhl_j5xg0f55gc8zdlfxr0000gn/T/tmp4eeiyt2k/865872of.json
+2024-12-02 11:57:18,641 [DEBUG] idx 0
+2024-12-02 11:57:18,641 [DEBUG] running CmdStan, num_threads: None
+2024-12-02 11:57:18,641 [DEBUG] CmdStan args: ['/Users/nevilsmac/Downloads/CMPE 272/cmpe272env/cmpe272/lib/python3.11/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=61982', 'data', 'file=/var/folders/5n/rd1jhl_j5xg0f55gc8zdlfxr0000gn/T/tmp4eeiyt2k/xdwxrlzb.json', 'init=/var/folders/5n/rd1jhl_j5xg0f55gc8zdlfxr0000gn/T/tmp4eeiyt2k/865872of.json', 'output', 'file=/var/folders/5n/rd1jhl_j5xg0f55gc8zdlfxr0000gn/T/tmp4eeiyt2k/prophet_modellfkn0nbt/prophet_model-20241202115718.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-12-02 11:57:18,641 [INFO] Chain [1] start processing
+2024-12-02 11:57:21,384 [INFO] Chain [1] done processing
+2024-12-02 11:57:42,088 [ERROR] ValueError: time data 'Dec 4, 2023' does not match format '%Y-%m-%d'
+2024-12-02 11:57:55,547 [ERROR] ValueError: time data 'Dec 4, 2023' does not match format '%Y-%m-%d'
+2024-12-02 11:59:54,081 [ERROR] Importing plotly failed. Interactive plots will not work.
+2024-12-02 12:00:47,214 [ERROR] Importing plotly failed. Interactive plots will not work.
+2024-12-02 12:00:52,491 [INFO] Retrieved 3812 transactions for ticker 'META' in period '1y'
+2024-12-02 12:00:55,143 [ERROR] ValueError: time data 'Dec 4, 2023' does not match format '%Y-%m-%d'
+2024-12-02 12:03:11,195 [ERROR] Importing plotly failed. Interactive plots will not work.
+2024-12-02 12:03:25,014 [ERROR] Importing plotly failed. Interactive plots will not work.
+2024-12-02 12:03:44,802 [ERROR] Importing plotly failed. Interactive plots will not work.
+2024-12-02 12:04:40,108 [ERROR] Importing plotly failed. Interactive plots will not work.
+2024-12-02 12:04:47,263 [ERROR] ValueError: '%' is a bad directive in format '%Y-%m-%\d'
+2024-12-02 12:04:48,504 [ERROR] ValueError: '%' is a bad directive in format '%Y-%m-%\d'
+2024-12-02 12:06:13,714 [ERROR] Importing plotly failed. Interactive plots will not work.
+2024-12-02 12:06:16,711 [ERROR] An error occurred: 'ForecastInput' object is not subscriptable
+2024-12-02 12:06:17,592 [ERROR] An error occurred: 'ForecastInput' object is not subscriptable
+2024-12-02 12:06:28,670 [ERROR] Importing plotly failed. Interactive plots will not work.
+2024-12-02 12:06:33,964 [ERROR] Importing plotly failed. Interactive plots will not work.
+2024-12-02 12:06:35,443 [ERROR] ValueError: time data 'Dec 4, 2023' does not match format '%Y-%m-%d'
+2024-12-02 12:10:06,053 [ERROR] Importing plotly failed. Interactive plots will not work.
+2024-12-02 12:10:12,079 [DEBUG] input tempfile: /var/folders/5n/rd1jhl_j5xg0f55gc8zdlfxr0000gn/T/tmpwmn2w9ug/j7fe2j0b.json
+2024-12-02 12:10:12,080 [DEBUG] input tempfile: /var/folders/5n/rd1jhl_j5xg0f55gc8zdlfxr0000gn/T/tmpwmn2w9ug/cir8d3f1.json
+2024-12-02 12:10:12,082 [DEBUG] idx 0
+2024-12-02 12:10:12,082 [DEBUG] running CmdStan, num_threads: None
+2024-12-02 12:10:12,082 [DEBUG] CmdStan args: ['/Users/nevilsmac/Downloads/CMPE 272/cmpe272env/cmpe272/lib/python3.11/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=95492', 'data', 'file=/var/folders/5n/rd1jhl_j5xg0f55gc8zdlfxr0000gn/T/tmpwmn2w9ug/j7fe2j0b.json', 'init=/var/folders/5n/rd1jhl_j5xg0f55gc8zdlfxr0000gn/T/tmpwmn2w9ug/cir8d3f1.json', 'output', 'file=/var/folders/5n/rd1jhl_j5xg0f55gc8zdlfxr0000gn/T/tmpwmn2w9ug/prophet_modelh5dur4ay/prophet_model-20241202121012.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-12-02 12:10:12,082 [INFO] Chain [1] start processing
+2024-12-02 12:10:12,610 [INFO] Chain [1] done processing
+2024-12-02 12:13:34,548 [DEBUG] input tempfile: /var/folders/5n/rd1jhl_j5xg0f55gc8zdlfxr0000gn/T/tmpwmn2w9ug/j4zmvjdc.json
+2024-12-02 12:13:34,550 [DEBUG] input tempfile: /var/folders/5n/rd1jhl_j5xg0f55gc8zdlfxr0000gn/T/tmpwmn2w9ug/6wok7rrj.json
+2024-12-02 12:13:34,551 [DEBUG] idx 0
+2024-12-02 12:13:34,551 [DEBUG] running CmdStan, num_threads: None
+2024-12-02 12:13:34,551 [DEBUG] CmdStan args: ['/Users/nevilsmac/Downloads/CMPE 272/cmpe272env/cmpe272/lib/python3.11/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=49828', 'data', 'file=/var/folders/5n/rd1jhl_j5xg0f55gc8zdlfxr0000gn/T/tmpwmn2w9ug/j4zmvjdc.json', 'init=/var/folders/5n/rd1jhl_j5xg0f55gc8zdlfxr0000gn/T/tmpwmn2w9ug/6wok7rrj.json', 'output', 'file=/var/folders/5n/rd1jhl_j5xg0f55gc8zdlfxr0000gn/T/tmpwmn2w9ug/prophet_model3mydt21r/prophet_model-20241202121334.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2024-12-02 12:13:34,551 [INFO] Chain [1] start processing
+2024-12-02 12:13:35,070 [INFO] Chain [1] done processing

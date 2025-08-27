@@ -1,0 +1,9 @@
+[build]
+  base = "frontend"
+  command = "npm ci && npm run build"
+  publish = "frontend/build"
+
+[build.environment]
+  # Set REACT_APP_API_BASE_URL in Netlify UI for production
+  CI = "true"
+

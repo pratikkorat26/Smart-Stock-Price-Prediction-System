@@ -1,3 +1,25 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Node/React
+node_modules/
+frontend/build/
+.cache/
+
+# Env files
+.env
+backend/.env
+frontend/.env
+
+# Logs
+*.log
+backend/transaction_service.log
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies

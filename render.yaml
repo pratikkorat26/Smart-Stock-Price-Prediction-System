@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: cmpe272-backend
+    env: docker
+    plan: free
+    region: oregon
+    rootDir: backend
+    healthCheckPath: /
+    autoDeploy: true
+

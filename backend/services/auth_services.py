@@ -2,15 +2,22 @@ from passlib.context import CryptContext
 from jose import JWTError, jwt
 from google.oauth2 import id_token
 from google.auth.transport.requests import Request
+import os
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-SECRET_KEY = "dajsrvbdjaslerhieofbsdjmcxfsdfksdkvldncvlsdkgjsdgksgksdhglsdkjg"  # Replace with a strong, randomly generated secret key
+SECRET_KEY = os.getenv("JWT_SECRET") or os.getenv("SECRET_KEY")
+if not SECRET_KEY:
+    raise RuntimeError(
+        "JWT_SECRET (or SECRET_KEY) environment variable is not set. Set a strong secret for token signing."
+    )
 ALGORITHM = "HS256"
 
 
 def decode_access_google_token(token: str):
     try:
-        CLIENT_ID = "978139760528-bmaaljd4da3akanum226u4627h4iq98e.apps.googleusercontent.com"
+        CLIENT_ID = os.getenv("GOOGLE_OAUTH_CLIENT_ID")
+        if not CLIENT_ID:
+            return None
         idinfo = id_token.verify_oauth2_token(token, Request(), CLIENT_ID)
         return idinfo
     except ValueError:
