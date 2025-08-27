@@ -1,6 +1,6 @@
 // Updated App.tsx to set Landing.tsx as the default route and fix navbar logo behavior
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { ThemeProvider, CssBaseline, Box } from '@mui/material';
 import theme from './theme';
 import './styles/common.css';
