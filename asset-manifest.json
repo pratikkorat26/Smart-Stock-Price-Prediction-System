@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Smart-Stock-Price-Prediction-System/static/css/main.edf20590.css",
+    "main.js": "/Smart-Stock-Price-Prediction-System/static/js/main.8f8fc7f8.js",
+    "static/js/453.85114b96.chunk.js": "/Smart-Stock-Price-Prediction-System/static/js/453.85114b96.chunk.js",
+    "static/media/login_background.jpg": "/Smart-Stock-Price-Prediction-System/static/media/login_background.fe7d1a598ad2b036b918.jpg",
+    "static/media/flow.png": "/Smart-Stock-Price-Prediction-System/static/media/flow.792f7c57e1d33bfccd76.png",
+    "index.html": "/Smart-Stock-Price-Prediction-System/index.html",
+    "main.edf20590.css.map": "/Smart-Stock-Price-Prediction-System/static/css/main.edf20590.css.map",
+    "main.8f8fc7f8.js.map": "/Smart-Stock-Price-Prediction-System/static/js/main.8f8fc7f8.js.map",
+    "453.85114b96.chunk.js.map": "/Smart-Stock-Price-Prediction-System/static/js/453.85114b96.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.edf20590.css",
+    "static/js/main.8f8fc7f8.js"
+  ]
+}
